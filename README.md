@@ -1,1 +1,1 @@
-tuty-fruty-slot-for-android
+Tuty fruty slot for Android
