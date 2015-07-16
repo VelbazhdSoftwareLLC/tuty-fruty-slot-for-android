@@ -40,7 +40,7 @@ package eu.veldsoft.tuty.fruty.slot;
 //
 // SDLSprite* Save;
 //
-// for(Node = SpriteList.Next(); Node != SpriteList.List(); Node = Save)
+// for(Node = SpriteList.Next(){} Node != SpriteList.List(){} Node = Save)
 // {
 //     Save = Node->m_Next;
 //     Add code to update sprite here
@@ -53,15 +53,15 @@ package eu.veldsoft.tuty.fruty.slot;
 class SDLSpriteList {
 public:
 
-	SDLSpriteList(void);
+	SDLSpriteList(void){}
 
-	~SDLSpriteList(void);
+	~SDLSpriteList(void){}
 
-	SDLSprite *AddSprite(SDLSprite* pTile, int Type=0, int PosX=0, int PosY=0, int VelX=0, int VelY=0, int State=0, int Frame=0, int Delay=0, Uint32 DelayStart=0);
+	SDLSprite *AddSprite(SDLSprite* pTile, int Type=0, int PosX=0, int PosY=0, int VelX=0, int VelY=0, int State=0, int Frame=0, int Delay=0, Uint32 DelayStart=0){}
 
-	SDLSprite* AddSprite(SDLSprite* pNode);
+	SDLSprite* AddSprite(SDLSprite* pNode){}
 
-	void DelSprite(SDLSprite* pNode);
+	void DelSprite(SDLSprite* pNode){}
 
 	SDLSprite* Next(void) {
 		return m_List.m_Next;
@@ -75,11 +75,11 @@ public:
 		return &m_List;
 	}
 
-	void Draw(SDL_Surface* lpSDLS, long int ScrnWorldX, long int ScrnWorldY);
+	void Draw(SDL_Surface* lpSDLS, long int ScrnWorldX, long int ScrnWorldY){}
 
 public:
 
 	SDLSprite m_List;			// The top of the list
 
 	int m_nSprites;				// The number of sprites in the list
-};
+}

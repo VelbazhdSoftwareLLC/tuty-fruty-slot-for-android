@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -32,176 +33,173 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 06 Oct 2008
  */
-class GraphicGameScreen : public GameScreen {
-public:
+class GraphicGameScreen extends GameScreen {
 
 	/**
 	 * Constant reels x coordinate.
 	 */
-	static const int REELS_X = 91;
+	public static final int REELS_X = 91;
 
 	/**
 	 * Constant reels y coordinate.
 	 */
-	static const int REELS_Y = 126;
+	public static final int REELS_Y = 126;
 
 	/**
 	 * Constant reels width.
 	 */
-	static const int REELS_WIDTH = 0;
+	public static final int REELS_WIDTH = 0;
 
 	/**
 	 * Constant reels height.
 	 */
-	static const int REELS_HEIGHT = 0;
+	public static final int REELS_HEIGHT = 0;
 
 	/**
 	 * Constant symbol width.
 	 */
-	static const int REELS_SYMBOL_WIDTH = 75;
+	public static final int REELS_SYMBOL_WIDTH = 75;
 
 	/**
 	 * Constant symbol height.
 	 */
-	static const int REELS_SYMBOL_HEIGHT = 63;
+	public static final int REELS_SYMBOL_HEIGHT = 63;
 
 	/**
 	 * Constant vertical splitter width.
 	 */
-	static const int REELS_VERTICAL_SPLITTER_WIDTH = 9;
+	public static final int REELS_VERTICAL_SPLITTER_WIDTH = 9;
 
 	/**
 	 * Constant horizontal splitter height.
 	 */
-	static const int REELS_HORIZONTAL_SPLITTER_HEIGHT = 10;
+	public static final int REELS_HORIZONTAL_SPLITTER_HEIGHT = 10;
 
 	/**
 	 * Constant lines selector x coordinate.
 	 */
-	static const int SELECTOR_X = 0;
+	public static final int SELECTOR_X = 0;
 
 	/**
 	 * Constant lines selector y coordinate.
 	 */
-	static const int SELECTOR_Y = 0;
+	public static final int SELECTOR_Y = 0;
 
 	/**
 	 * Constant lines selector width.
 	 */
-	static const int SELECTOR_WIDTH = 48;
+	public static final int SELECTOR_WIDTH = 48;
 
 	/**
 	 * Constant lines selector height.
 	 */
-	static const int SELECTOR_HEIGHT = 11;
+	public static final int SELECTOR_HEIGHT = 11;
 
 	/**
 	 * Constant bet x coordinate.
 	 */
-	static const int BET_X = 65;
+	public static final int BET_X = 65;
 
 	/**
 	 * Constant bet y coordinate.
 	 */
-	static const int BET_Y = 380;
+	public static final int BET_Y = 380;
 
 	/**
 	 * Constant bet width.
 	 */
-	static const int BET_WIDTH = 0;
+	public static final int BET_WIDTH = 0;
 
 	/**
 	 * Constant bet height.
 	 */
-	static const int BET_HEIGHT = 0;
+	public static final int BET_HEIGHT = 0;
 
 	/**
 	 * Constant lines selected x coordinate.
 	 */
-	static const int LINES_X = 135;
+	public static final int LINES_X = 135;
 
 	/**
 	 * Constant lines selected y coordinate.
 	 */
-	static const int LINES_Y = 380;
+	public static final int LINES_Y = 380;
 
 	/**
 	 * Constant lines selected width.
 	 */
-	static const int LINES_WIDTH = 0;
+	public static final int LINES_WIDTH = 0;
 
 	/**
 	 * Constant lines selected height.
 	 */
-	static const int LINES_HEIGHT = 0;
+	public static final int LINES_HEIGHT = 0;
 
 	/**
 	 * Constant total bet x coordinate.
 	 */
-	static const int TOTAL_X = 240;
+	public static final int TOTAL_X = 240;
 
 	/**
 	 * Constant total bet y coordinate.
 	 */
-	static const int TOTAL_Y = 380;
+	public static final int TOTAL_Y = 380;
 
 	/**
 	 * Constant total bet width.
 	 */
-	static const int TOTAL_WIDTH = 0;
+	public static final int TOTAL_WIDTH = 0;
 
 	/**
 	 * Constant total bet height.
 	 */
-	static const int TOTAL_HEIGHT = 0;
+	public static final int TOTAL_HEIGHT = 0;
 
 	/**
 	 * Constant winner paid x coordinate.
 	 */
-	static const int PAID_X = 335;
+	public static final int PAID_X = 335;
 
 	/**
 	 * Constant winner paid y coordinate.
 	 */
-	static const int PAID_Y = 380;
+	public static final int PAID_Y = 380;
 
 	/**
 	 * Constant winner paid width.
 	 */
-	static const int PAID_WIDTH = 0;
+	public static final int PAID_WIDTH = 0;
 
 	/**
 	 * Constant winner paid height.
 	 */
-	static const int PAID_HEIGHT = 0;
+	public static final int PAID_HEIGHT = 0;
 
 	/**
 	 * Constant credit x coordinate.
 	 */
-	static const int CREDIT_X = 440;
+	public static final int CREDIT_X = 440;
 
 	/**
 	 * Constant credit y coordinate.
 	 */
-	static const int CREDIT_Y = 380;
+	public static final int CREDIT_Y = 380;
 
 	/**
 	 * Constant credit width.
 	 */
-	static const int CREDIT_WIDTH = 0;
+	public static final int CREDIT_WIDTH = 0;
 
 	/**
 	 * Constant credit height.
 	 */
-	static const int CREDIT_HEIGHT = 0;
-
-public:
+	public static final int CREDIT_HEIGHT = 0;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param canvas Visual components in game screen will be drawn on text
-	 * canvas.
+	 * @param canvas
+	 *            Visual components in game screen will be drawn on text canvas.
 	 *
 	 * @author
 	 *
@@ -209,5 +207,7 @@ public:
 	 *
 	 * @date
 	 */
-	GraphicGameScreen(Canvas* canvas);
-};
+	public GraphicGameScreen(Canvas canvas) {
+		super(canvas);
+	}
+}

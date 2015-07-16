@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,9 +21,9 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Simulate drawing components on the video screen. Holds width and height of the
- * drawing field. Draws numbers, symbols on the drawing field with the specified
- * coordinates. Prints text symbols on video screen.
+ * Simulate drawing components on the video screen. Holds width and height of
+ * the drawing field. Draws numbers, symbols on the drawing field with the
+ * specified coordinates. Prints text symbols on video screen.
  *
  * @author Todor Balabanov
  *
@@ -30,20 +31,17 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 23 Apr 2009
  */
-class GraphicCanvas : public Canvas {
-public:
+class GraphicCanvas extends Canvas {
 
 	/**
 	 * Width of graphic canvas constant.
 	 */
-	static const int WIDTH = 640;
+	public static final int WIDTH = 640;
 
 	/**
 	 * Height of graphic canvas constant.
 	 */
-	static const int HEIGHT = 480;
-
-public:
+	public static final int HEIGHT = 480;
 
 	/**
 	 * Open graphic mode.
@@ -56,7 +54,9 @@ public:
 	 *
 	 * @date 29 Apr 2009
 	 */
-	static bool open();
+	public static boolean open() {
+		return false;
+	}
 
 	/**
 	 * Close graphic mode.
@@ -67,16 +67,13 @@ public:
 	 *
 	 * @date 29 Apr 2009
 	 */
-	static void close();
+	public static void close() {
+	}
 
-private:
-
-	/**
-	 * Buffer for drawing.
-	 */
-	SDL_Surface *canvas;
-
-public:
+	private/**
+			 * Buffer for drawing.
+			 */
+	Util.SDL_Surface canvas;
 
 	/**
 	 * Default constructgor.
@@ -87,7 +84,8 @@ public:
 	 *
 	 * @date 29 Apr 2009
 	 */
-	GraphicCanvas();
+	public GraphicCanvas() {
+	}
 
 	/**
 	 * Canvas getter.
@@ -100,54 +98,21 @@ public:
 	 *
 	 * @date
 	 */
-	SDL_Surface* getCanvas();
+	public Util.SDL_Surface getCanvas() {
+		return null;
+	}
 
 	/**
 	 * Draw SDL surface on canvas.
 	 *
-	 * @param surface SDL surface pointer.
+	 * @param surface
+	 *            SDL surface pointer.
 	 *
-	 * @param x Left side of the number.
+	 * @param x
+	 *            Left side of the number.
 	 *
-	 * @param y Top side of the number.
-	 *
-	 * @author Nikolay Dimitrov
-	 *
-	 * @email nikidimi@gmail.com
-	 *
-	 * @date 10 May 2009
-	 */
-	void drawSurface(SDL_Surface *surface, int x, int y);
-
-	/**
-	 * Set string on canvas.
-	 *
-	 * @param index Game symbols array index.
-	 *
-	 * @param string String to be drawn.
-	 *
-	 * @param x Left side of the string.
-	 *
-	 * @param y Top side of the string.
-	 *
-	 * @author
-	 *
-	 * @email
-	 *
-	 * @date
-	 */
-	void drawSymbol(int index, int x, int y);
-
-	/**
-	 * Draw number on canvas.
-	 *
-	 * @param number Number to be drawn.
-	 *
-	 * @param x Left side of the number.
-	 *
-	 * @param y Top side of the number.
-	 *
-	 * @param digits Maximum number of digits.
+	 * @param y
+	 *            Top side of the number.
 	 *
 	 * @author Nikolay Dimitrov
 	 *
@@ -155,35 +120,23 @@ public:
 	 *
 	 * @date 10 May 2009
 	 */
-	void drawNumber(long number, int x, int y, int digits);
-
-	/**
-	 * Draw number on canvas.
-	 *
-	 * @param number Number to be drawn.
-	 *
-	 * @param x Left side of the number.
-	 *
-	 * @param y Top side of the number.
-	 *
-	 * @param digits Maximum number of digits.
-	 *
-	 * @author
-	 *
-	 * @email
-	 *
-	 * @date
-	 */
-	void drawNumber(double number, int x, int y, int digits);
+	public void drawSurface(Util.SDL_Surface surface, int x, int y) {
+	}
 
 	/**
 	 * Set string on canvas.
 	 *
-	 * @param string String to be drawn.
+	 * @param index
+	 *            Game symbols array index.
 	 *
-	 * @param x Left side of the string.
+	 * @param string
+	 *            String to be drawn.
 	 *
-	 * @param y Top side of the string.
+	 * @param x
+	 *            Left side of the string.
+	 *
+	 * @param y
+	 *            Top side of the string.
 	 *
 	 * @author
 	 *
@@ -191,7 +144,77 @@ public:
 	 *
 	 * @date
 	 */
-	void drawString(const char* string, int x, int y);
+	public void drawSymbol(int index, int x, int y) {
+	}
+
+	/**
+	 * Draw number on canvas.
+	 *
+	 * @param number
+	 *            Number to be drawn.
+	 *
+	 * @param x
+	 *            Left side of the number.
+	 *
+	 * @param y
+	 *            Top side of the number.
+	 *
+	 * @param digits
+	 *            Maximum number of digits.
+	 *
+	 * @author Nikolay Dimitrov
+	 *
+	 * @email nikidimi@gmail.com
+	 *
+	 * @date 10 May 2009
+	 */
+	public void drawNumber(long number, int x, int y, int digits) {
+	}
+
+	/**
+	 * Draw number on canvas.
+	 *
+	 * @param number
+	 *            Number to be drawn.
+	 *
+	 * @param x
+	 *            Left side of the number.
+	 *
+	 * @param y
+	 *            Top side of the number.
+	 *
+	 * @param digits
+	 *            Maximum number of digits.
+	 *
+	 * @author
+	 *
+	 * @email
+	 *
+	 * @date
+	 */
+	public void drawNumber(double number, int x, int y, int digits) {
+	}
+
+	/**
+	 * Set string on canvas.
+	 *
+	 * @param string
+	 *            String to be drawn.
+	 *
+	 * @param x
+	 *            Left side of the string.
+	 *
+	 * @param y
+	 *            Top side of the string.
+	 *
+	 * @author
+	 *
+	 * @email
+	 *
+	 * @date
+	 */
+	public void drawString(String string, int x, int y) {
+	}
 
 	/**
 	 * Draw background image.
@@ -202,7 +225,8 @@ public:
 	 *
 	 * @date
 	 */
-	void drawBackground();
+	public void drawBackground() {
+	}
 
 	/**
 	 * Clean graphic canvas.
@@ -213,7 +237,8 @@ public:
 	 *
 	 * @date 10 May 2009
 	 */
-	void clean();
+	public void clean() {
+	}
 
 	/**
 	 * Draw double buffer on the screen.
@@ -224,7 +249,8 @@ public:
 	 *
 	 * @date 10 May 2009
 	 */
-	void draw();
+	public void draw() {
+	}
 
 	/**
 	 * Destructor.
@@ -235,5 +261,6 @@ public:
 	 *
 	 * @date
 	 */
-	~GraphicCanvas();
-};
+	public void finalize() {
+	}
+}

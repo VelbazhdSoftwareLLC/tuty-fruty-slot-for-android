@@ -38,162 +38,162 @@ public:
 	/**
 	 * Constant reels x coordinate.
 	 */
-	static const int REELS_X = 7;
+	static final int REELS_X = 7;
 
 	/**
 	 * Constant reels y coordinate.
 	 */
-	static const int REELS_Y = 0;
+	static final int REELS_Y = 0;
 
 	/**
 	 * Constant reels width.
 	 */
-	static const int REELS_WIDTH = 0;
+	static final int REELS_WIDTH = 0;
 
 	/**
 	 * Constant reels height.
 	 */
-	static const int REELS_HEIGHT = 0;
+	static final int REELS_HEIGHT = 0;
 
 	/**
 	 * Constant symbol width.
 	 */
-	static const int REELS_SYMBOL_WIDTH = 6;
+	static final int REELS_SYMBOL_WIDTH = 6;
 
 	/**
 	 * Constant symbol height.
 	 */
-	static const int REELS_SYMBOL_HEIGHT = 3;
+	static final int REELS_SYMBOL_HEIGHT = 3;
 
 	/**
 	 * Constant vertical splitter width.
 	 */
-	static const int REELS_VERTICAL_SPLITTER_WIDTH = 1;
+	static final int REELS_VERTICAL_SPLITTER_WIDTH = 1;
 
 	/**
 	 * Constant horizontal splitter height.
 	 */
-	static const int REELS_HORIZONTAL_SPLITTER_HEIGHT = 1;
+	static final int REELS_HORIZONTAL_SPLITTER_HEIGHT = 1;
 
 	/**
 	 * Constant lines selector x coordinate.
 	 */
-	static const int SELECTOR_X = 0;
+	static final int SELECTOR_X = 0;
 
 	/**
 	 * Constant lines selector y coordinate.
 	 */
-	static const int SELECTOR_Y = 0;
+	static final int SELECTOR_Y = 0;
 
 	/**
 	 * Constant lines selector width.
 	 */
-	static const int SELECTOR_WIDTH = 48;
+	static final int SELECTOR_WIDTH = 48;
 
 	/**
 	 * Constant lines selector height.
 	 */
-	static const int SELECTOR_HEIGHT = 11;
+	static final int SELECTOR_HEIGHT = 11;
 
 	/**
 	 * Constant bet x coordinate.
 	 */
-	static const int BET_X = 0;
+	static final int BET_X = 0;
 
 	/**
 	 * Constant bet y coordinate.
 	 */
-	static const int BET_Y = 15;
+	static final int BET_Y = 15;
 
 	/**
 	 * Constant bet width.
 	 */
-	static const int BET_WIDTH = 0;
+	static final int BET_WIDTH = 0;
 
 	/**
 	 * Constant bet height.
 	 */
-	static const int BET_HEIGHT = 0;
+	static final int BET_HEIGHT = 0;
 
 	/**
 	 * Constant lines selected x coordinate.
 	 */
-	static const int LINES_X = 6;
+	static final int LINES_X = 6;
 
 	/**
 	 * Constant lines selected y coordinate.
 	 */
-	static const int LINES_Y = 15;
+	static final int LINES_Y = 15;
 
 	/**
 	 * Constant lines selected width.
 	 */
-	static const int LINES_WIDTH = 0;
+	static final int LINES_WIDTH = 0;
 
 	/**
 	 * Constant lines selected height.
 	 */
-	static const int LINES_HEIGHT = 0;
+	static final int LINES_HEIGHT = 0;
 
 	/**
 	 * Constant total bet x coordinate.
 	 */
-	static const int TOTAL_X = 14;
+	static final int TOTAL_X = 14;
 
 	/**
 	 * Constant total bet y coordinate.
 	 */
-	static const int TOTAL_Y = 15;
+	static final int TOTAL_Y = 15;
 
 	/**
 	 * Constant total bet width.
 	 */
-	static const int TOTAL_WIDTH = 0;
+	static final int TOTAL_WIDTH = 0;
 
 	/**
 	 * Constant total bet height.
 	 */
-	static const int TOTAL_HEIGHT = 0;
+	static final int TOTAL_HEIGHT = 0;
 
 	/**
 	 * Constant winner paid x coordinate.
 	 */
-	static const int PAID_X = 26;
+	static final int PAID_X = 26;
 
 	/**
 	 * Constant winner paid y coordinate.
 	 */
-	static const int PAID_Y = 15;
+	static final int PAID_Y = 15;
 
 	/**
 	 * Constant winner paid width.
 	 */
-	static const int PAID_WIDTH = 0;
+	static final int PAID_WIDTH = 0;
 
 	/**
 	 * Constant winner paid height.
 	 */
-	static const int PAID_HEIGHT = 0;
+	static final int PAID_HEIGHT = 0;
 
 	/**
 	 * Constant credit x coordinate.
 	 */
-	static const int CREDIT_X = 40;
+	static final int CREDIT_X = 40;
 
 	/**
 	 * Constant credit y coordinate.
 	 */
-	static const int CREDIT_Y = 15;
+	static final int CREDIT_Y = 15;
 
 	/**
 	 * Constant credit width.
 	 */
-	static const int CREDIT_WIDTH = 0;
+	static final int CREDIT_WIDTH = 0;
 
 	/**
 	 * Constant credit height.
 	 */
-	static const int CREDIT_HEIGHT = 0;
+	static final int CREDIT_HEIGHT = 0;
 
 public:
 
@@ -209,5 +209,5 @@ public:
 	 *
 	 * @date
 	 */
-	TextGameScreen(Canvas* canvas);
-};
+	TextGameScreen(Canvas* canvas){}
+}

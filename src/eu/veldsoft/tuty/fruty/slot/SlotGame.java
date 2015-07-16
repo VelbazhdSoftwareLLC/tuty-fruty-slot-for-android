@@ -37,22 +37,22 @@ public:
 	/**
 	 * Splash screen constant flag.
 	 */
-	static const unsigned char SPLASH_SCREEN = 0;
+	static final  char SPLASH_SCREEN = 0;
 
 	/**
 	 * Game screen constant flag.
 	 */
-	static const unsigned char GAME_SCREEN = 1;
+	static final  char GAME_SCREEN = 1;
 
 	/**
 	 * Pay table screen constant flag.
 	 */
-	static const unsigned char PAYTABLE_SCREEN = 2;
+	static final  char PAYTABLE_SCREEN = 2;
 
 	/**
 	 * Help screen constant flag.
 	 */
-	static const unsigned char HELP_SCREEN = 3;
+	static final  char HELP_SCREEN = 3;
 
 protected:
 	/**
@@ -63,7 +63,7 @@ protected:
 	/**
 	 * Flag indicating which screen is shown at the moment.
 	 */
-	unsigned char activeScreen;
+	 char activeScreen;
 
 	//TODO Splash screen.
 
@@ -90,7 +90,7 @@ protected:
 	 *
 	 * @date 17 Oct 2008
 	 */
-	void printStatistics();
+	void printStatistics(){}
 
 public:
 
@@ -103,7 +103,7 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	SlotGame();
+	SlotGame(){}
 
 	/**
 	 * Initializing all game visual components.
@@ -114,7 +114,7 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	virtual void initialize() = 0;
+	void initialize(){}
 
 	/**
 	 * Game loop.
@@ -125,7 +125,7 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	virtual void loop() = 0;
+	void loop(){}
 
 	/**
 	 * Finalize the game.
@@ -137,16 +137,6 @@ public:
 	 * @date 08 Oct 2008
 	 */
 	@Override
-	virtual void finalize() = 0;
-
-	/**
-	 * Destructor.
-	 *
-	 * @author
-	 *
-	 * @email
-	 *
-	 * @date
-	 */
-	~SlotGame();
-};
+	protected void finzlize() {
+	}
+}

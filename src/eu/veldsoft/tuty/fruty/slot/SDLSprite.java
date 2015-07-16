@@ -57,13 +57,13 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 class SDLSprite {
 public:
-	SDLSprite(void);
-	SDLSprite(const char* Filename, int w, int h, int num);
-	SDLSprite(SDLSprite *pTile);
-	virtual ~SDLSprite(void);
+	SDLSprite(void){}
+	SDLSprite(final char* Filename, int w, int h, int num){}
+	SDLSprite(SDLSprite *pTile){}
+	~SDLSprite(void){}
 
-	SDL_bool Create(const char* Filename, int w, int h, int num);
-	SDL_bool Create(SDLSprite *pTile);
+	SDL_bool Create(final char* Filename, int w, int h, int num){}
+	SDL_bool Create(SDLSprite *pTile){}
 
 	int  min(int num1, int num2) {
 		if (num1<num2) return num1;
@@ -89,30 +89,30 @@ public:
 	void SetType(int Type) {
 		m_Type = Type;
 	}
-	void SetColorKey (Uint8 R, Uint8 G, Uint8 B);
-	void SetColorKey (void);
-	void SetObjective(int ObjX, int ObjY);
-	float F_Direction(void);
-	void Orientation(float Dir, short int NbPos);
-	void Mvt(double	DeltaTime, short int NbPos=-1);
-	SDL_bool End_Mvt(SDLSprite* Sprite); // verifie si le Sprite est arriv� � destination
+	void SetColorKey (Uint8 R, Uint8 G, Uint8 B){}
+	void SetColorKey (void){}
+	void SetObjective(int ObjX, int ObjY){}
+	float F_Direction(void){}
+	void Orientation(float Dir, short int NbPos){}
+	void Mvt(double	DeltaTime, short int NbPos=-1){}
+	SDL_bool End_Mvt(SDLSprite* Sprite){} // verifie si le Sprite est arriv� � destination
 
 	void SetAlphaValue(Uint32 Shade) {
 		m_AlphaValue=Shade;
-		SDL_SetAlpha(m_Surface, SDL_SRCALPHA, Shade);
+		SDL_SetAlpha(m_Surface, SDL_SRCALPHA, Shade){}
 	}
 
-	SDL_bool SpriteHit(SDLSprite* pSprite);
-	SDL_bool SpriteHitPixel(SDLSprite* pSprite);
+	SDL_bool SpriteHit(SDLSprite* pSprite){}
+	SDL_bool SpriteHitPixel(SDLSprite* pSprite){}
 
-	void Draw(SDL_Surface* lpSDLS, long int ScrnWorldX, long int ScrnWorldY);
+	void Draw(SDL_Surface* lpSDLS, long int ScrnWorldX, long int ScrnWorldY){}
 
-	SDL_bool InitShadow(int OffX, int OffY, Uint8 Shade, Uint32 Alpha);
-	void SetShadowOffset(int dx, int dy);
-	void SetShadowValue(Uint8 Shade, Uint32 Alpha);
+	SDL_bool InitShadow(int OffX, int OffY, Uint8 Shade, Uint32 Alpha){}
+	void SetShadowOffset(int dx, int dy){}
+	void SetShadowValue(Uint8 Shade, Uint32 Alpha){}
 
 protected:
-	void Init();
+	void Init(){}
 	SDL_bool m_TileCreated;
 
 public:
@@ -151,4 +151,4 @@ public:
 
 	SDLSprite* m_Next;		// A SDLSprite pointer to the next sprite in a SDLSpriteList
 	SDLSprite* m_Prev;		// A SDLSprite pointer to the previous sprite in a SDLSpriteList
-};
+}

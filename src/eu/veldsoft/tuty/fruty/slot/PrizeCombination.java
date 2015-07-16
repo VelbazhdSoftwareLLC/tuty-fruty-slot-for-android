@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -22,8 +23,8 @@ package eu.veldsoft.tuty.fruty.slot;
 /**
  * Implements prize combination of symbols. Holds type of symbol. Holds flag
  * which indicates selected line. Holds symbol's coefficient for defining pay
- * out values of a symbol. Holds the name of the prize combination. Check if
- * two prize combinations are the same.
+ * out values of a symbol. Holds the name of the prize combination. Check if two
+ * prize combinations are the same.
  *
  * @author Qna Dimova
  *
@@ -32,36 +33,31 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 09 Sep 2008
  */
 class PrizeCombination {
-public:
 
 	/**
 	 * Size of prize combination name
 	 */
-	static const int NAME_SIZE = 50;
-
-private:
+	public static final int NAME_SIZE = 50;
 
 	/**
 	 * Combination of symbols distribution.
 	 */
-	Combination combination;
+	private Combination combination;
 
 	/**
 	 * Symbol for checking the prize of combination.
 	 */
-	ReelSymbol *symbol;
+	private ReelSymbol symbol;
 
 	/**
 	 * Coefficient of the symbol frequence.
 	 */
-	int coefficient;
+	private int coefficient;
 
 	/**
 	 * Name of prize combination
 	 */
-	char name[NAME_SIZE];
-
-public:
+	private String name;
 
 	/**
 	 * Default constructor.
@@ -72,18 +68,23 @@ public:
 	 *
 	 * @date 18 Sep 2008
 	 */
-	PrizeCombination();
+	public PrizeCombination() {
+	}
 
 	/**
 	 * Constructor.
 	 *
-	 * @param combination Combination of symbols.
+	 * @param combination
+	 *            Combination of symbols.
 	 *
-	 * @param symbol Symbol's flag.
+	 * @param symbol
+	 *            Symbol's flag.
 	 *
-	 * @param coefficient Used in pay table.
+	 * @param coefficient
+	 *            Used in pay table.
 	 *
-	 * @param name Symbols name
+	 * @param name
+	 *            Symbols name
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -91,7 +92,9 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	PrizeCombination(Combination combination, const ReelSymbol *symbol, const int coefficient, const char name[NAME_SIZE]);
+	public PrizeCombination(Combination combination, final ReelSymbol symbol,
+			final int coefficient, final String name) {
+	}
 
 	/**
 	 * Combination of symbols getter.
@@ -104,12 +107,15 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	Combination getCombination() const;
+	public Combination getCombination() {
+		return null;
+	}
 
 	/**
 	 * Combination of symbols setter.
 	 *
-	 * @param combination Combination to be set in the object.
+	 * @param combination
+	 *            Combination to be set in the object.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -117,7 +123,8 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	void setCombination(const Combination combination);
+	public void setCombination(final Combination combination) {
+	}
 
 	/**
 	 * Symbol getter.
@@ -130,12 +137,15 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	ReelSymbol* getSymbol() const;
+	public ReelSymbol getSymbol() {
+		return null;
+	}
 
 	/**
 	 * Symbol setter.
 	 *
-	 * @param symbol Symbol to be set in the object.
+	 * @param symbol
+	 *            Symbol to be set in the object.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -143,7 +153,8 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	void setSymbol(ReelSymbol *symbol);
+	public void setSymbol(ReelSymbol symbol) {
+	}
 
 	/**
 	 * Symbol's coefficient getter.
@@ -156,12 +167,15 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	int getCoefficient() const;
+	public int getCoefficient() {
+		return 0;
+	}
 
 	/**
 	 * Symbol's coefficient setter.
 	 *
-	 * @param coefficient Coefficient to be set in the object.
+	 * @param coefficient
+	 *            Coefficient to be set in the object.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -169,12 +183,14 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	void setCoefficient(const int coefficient);
+	public void setCoefficient(final int coefficient) {
+	}
 
 	/**
 	 * Name of prize combination getter.
 	 *
-	 * @param name Name of prize combination.
+	 * @param name
+	 *            Name of prize combination.
 	 *
 	 * @return Name of prize combination pointer.
 	 *
@@ -184,12 +200,15 @@ public:
 	 *
 	 * @date 02 Oct 2008
 	 */
-	char* getName(char name[NAME_SIZE]) const;
+	public String getName(String name) {
+		return null;
+	}
 
 	/**
 	 * Name of prize combination setter.
 	 *
-	 * @param name Name of prize combination.
+	 * @param name
+	 *            Name of prize combination.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -197,13 +216,15 @@ public:
 	 *
 	 * @date 02 Oct 2008
 	 */
-	void setName(const char name[NAME_SIZE]);
+	public void setName(final String name) {
+	}
 
 	/**
 	 * Compare two prize combinations.
 	 *
-	 * @param combination External prize combination to be compared with the
-	 * internal prize combination.
+	 * @param combination
+	 *            External prize combination to be compared with the internal
+	 *            prize combination.
 	 *
 	 * @return True if prize combinations are equal, false - otherwise.
 	 *
@@ -213,5 +234,7 @@ public:
 	 *
 	 * @date 02 Oct 2008
 	 */
-	bool equals(const PrizeCombination combination) const;
-};
+	public boolean equals(final PrizeCombination combination) {
+		return false;
+	}
+}

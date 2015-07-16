@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -28,34 +29,33 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 06 Oct 2008
  */
-class PayTableScreen : public Screen {
-private:
+class PayTableScreen extends Screen {
 
 	/**
 	 * Pay table screen visualization.
 	 */
-	Canvas* canvas;
+	private Canvas canvas;
 
 	/**
 	 * Takes bet value for calculating the pay table screen.
 	 */
-	Bet *bet;
+	private Bet bet;
 
 	/**
 	 * Takes number of selected lines for calculating the pay table screen.
 	 */
-	LinesSelector *selector;
-
-public:
+	private LinesSelector selector;
 
 	/**
 	 * Constructor. Takes care of initialization of pay table canvas, pay table
 	 * bet and pay table lines selector.
 	 *
-	 * @param canvas Visual components in pay table screen will be drawn on text
-	 * canvas.
+	 * @param canvas
+	 *            Visual components in pay table screen will be drawn on text
+	 *            canvas.
 	 *
-	 * @param game Contain value of bet and number of selected lines.
+	 * @param game
+	 *            Contain value of bet and number of selected lines.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -63,7 +63,8 @@ public:
 	 *
 	 * @date 26 Oct 2008
 	 */
-	PayTableScreen(Canvas* canvas, GameScreen* game);
+	public PayTableScreen(Canvas canvas, GameScreen game) {
+	}
 
 	/**
 	 * Draws pay table screen.
@@ -74,5 +75,6 @@ public:
 	 *
 	 * @date 26 Oct 2008
 	 */
-	void draw();
-};
+	public void draw() {
+	}
+}

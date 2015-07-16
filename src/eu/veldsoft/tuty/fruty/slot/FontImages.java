@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -29,249 +30,252 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 10 May 2009
  */
 class FontImages {
-public:
 
 	/**
 	 * Resources directory path used length constant.
 	 */
-	static const int RESOURCE_PATH_LENGTH = 100;
+	public static final int RESOURCE_PATH_LENGTH = 100;
 
 	/**
 	 * Desources direcotry path string.
 	 */
-	static const char RESOURCE_PATH[RESOURCE_PATH_LENGTH];
+	public static final String RESOURCE_PATH = "";
 
 	/**
 	 * Width of font symbol.
 	 */
-	static const int WIDTH = 32;
+	public static final int WIDTH = 32;
 
 	/**
 	 * Height of font symbol.
 	 */
-	static const int HEIGHT = 32;
+	public static final int HEIGHT = 32;
 
 	/**
 	 * Number of pixels to overlap during text rendering.
 	 */
-	static const int OVERLAP = 15;
+	public static final int OVERLAP = 15;
 
 	/**
 	 * Digit 0 image.
 	 */
-	static const SDL_Surface *DIGIT_0;
+	public static final Util.SDL_Surface DIGIT_0 = null;
 
 	/**
 	 * Digit 1 image.
 	 */
-	static const SDL_Surface *DIGIT_1;
+	public static final Util.SDL_Surface DIGIT_1 = null;
 
 	/**
 	 * Digit 2 image.
 	 */
-	static const SDL_Surface *DIGIT_2;
+	public static final Util.SDL_Surface DIGIT_2 = null;
 
 	/**
 	 * Digit 3 image.
 	 */
-	static const SDL_Surface *DIGIT_3;
+	public static final Util.SDL_Surface DIGIT_3 = null;
 
 	/**
 	 * Digit 4 image.
 	 */
-	static const SDL_Surface *DIGIT_4;
+	public static final Util.SDL_Surface DIGIT_4 = null;
 
 	/**
 	 * Digit 5 image.
 	 */
-	static const SDL_Surface *DIGIT_5;
+	public static final Util.SDL_Surface DIGIT_5 = null;
 
 	/**
 	 * Digit 6 image.
 	 */
-	static const SDL_Surface *DIGIT_6;
+	public static final Util.SDL_Surface DIGIT_6 = null;
 
 	/**
 	 * Digit 7 image.
 	 */
-	static const SDL_Surface *DIGIT_7;
+	public static final Util.SDL_Surface DIGIT_7 = null;
 
 	/**
 	 * Digit 8 image.
 	 */
-	static const SDL_Surface *DIGIT_8;
+	public static final Util.SDL_Surface DIGIT_8 = null;
 
 	/**
 	 * Digit 9 image.
 	 */
-	static const SDL_Surface *DIGIT_9;
+	public static final Util.SDL_Surface DIGIT_9 = null;
 
 	/**
 	 * Total number of used digits.
 	 */
-	static const int NUMBER_OF_DIGITS = 10;
+	public static final int NUMBER_OF_DIGITS = 10;
 
 	/**
-	 * All digits images in a signle array.
+	 * All digits images in a single array.
 	 */
-	static const SDL_Surface* DIGITS[ NUMBER_OF_DIGITS ];
+	public static final Util.SDL_Surface DIGITS[] = new Util.SDL_Surface[NUMBER_OF_DIGITS];
 
 	/**
 	 * Letter A image.
 	 */
-	static const SDL_Surface *LETTER_A;
+	public static final Util.SDL_Surface LETTER_A = null;
 
 	/**
 	 * Letter B image.
 	 */
-	static const SDL_Surface *LETTER_B;
+	public static final Util.SDL_Surface LETTER_B = null;
 
 	/**
 	 * Letter C image.
 	 */
-	static const SDL_Surface *LETTER_C;
+	public static final Util.SDL_Surface LETTER_C = null;
 
 	/**
 	 * Letter D image.
 	 */
-	static const SDL_Surface *LETTER_D;
+	public static final Util.SDL_Surface LETTER_D = null;
 
 	/**
 	 * Letter E image.
 	 */
-	static const SDL_Surface *LETTER_E;
+	public static final Util.SDL_Surface LETTER_E = null;
 
 	/**
 	 * Letter F image.
 	 */
-	static const SDL_Surface *LETTER_F;
+	public static final Util.SDL_Surface LETTER_F = null;
 
 	/**
 	 * Letter G image.
 	 */
-	static const SDL_Surface *LETTER_G;
+	public static final Util.SDL_Surface LETTER_G = null;
 
 	/**
 	 * Letter H image.
 	 */
-	static const SDL_Surface *LETTER_H;
+	public static final Util.SDL_Surface LETTER_H = null;
 
 	/**
 	 * Letter I image.
 	 */
-	static const SDL_Surface *LETTER_I;
+	public static final Util.SDL_Surface LETTER_I = null;
 
 	/**
 	 * Letter J image.
 	 */
-	static const SDL_Surface *LETTER_J;
+	public static final Util.SDL_Surface LETTER_J = null;
 
 	/**
 	 * Letter K image.
 	 */
-	static const SDL_Surface *LETTER_K;
+	public static final Util.SDL_Surface LETTER_K = null;
 
 	/**
 	 * Letter L image.
 	 */
-	static const SDL_Surface *LETTER_L;
+	public static final Util.SDL_Surface LETTER_L = null;
 
 	/**
 	 * Letter M image.
 	 */
-	static const SDL_Surface *LETTER_M;
+	public static final Util.SDL_Surface LETTER_M = null;
 
 	/**
 	 * Letter N image.
 	 */
-	static const SDL_Surface *LETTER_N;
+	public static final Util.SDL_Surface LETTER_N = null;
 
 	/**
 	 * Letter O image.
 	 */
-	static const SDL_Surface *LETTER_O;
+	public static final Util.SDL_Surface LETTER_O = null;
 
 	/**
 	 * Letter P image.
 	 */
-	static const SDL_Surface *LETTER_P;
+	public static final Util.SDL_Surface LETTER_P = null;
 
 	/**
 	 * Letter Q image.
 	 */
-	static const SDL_Surface *LETTER_Q;
+	public static final Util.SDL_Surface LETTER_Q = null;
 
 	/**
 	 * Letter R image.
 	 */
-	static const SDL_Surface *LETTER_R;
+	public static final Util.SDL_Surface LETTER_R = null;
 
 	/**
 	 * Letter S image.
 	 */
-	static const SDL_Surface *LETTER_S;
+	public static final Util.SDL_Surface LETTER_S = null;
 
 	/**
 	 * Letter T image.
 	 */
-	static const SDL_Surface *LETTER_T;
+	public static final Util.SDL_Surface LETTER_T = null;
 
 	/**
 	 * Letter U image.
 	 */
-	static const SDL_Surface *LETTER_U;
+	public static final Util.SDL_Surface LETTER_U = null;
 
 	/**
 	 * Letter V image.
 	 */
-	static const SDL_Surface *LETTER_V;
+	public static final Util.SDL_Surface LETTER_V = null;
 
 	/**
 	 * Letter W image.
 	 */
-	static const SDL_Surface *LETTER_W;
+	public static final Util.SDL_Surface LETTER_W = null;
 
 	/**
 	 * Letter X image.
 	 */
-	static const SDL_Surface *LETTER_X;
+	public static final Util.SDL_Surface LETTER_X = null;
 
 	/**
 	 * Letter Y image.
 	 */
-	static const SDL_Surface *LETTER_Y;
+	public static final Util.SDL_Surface LETTER_Y = null;
 
 	/**
 	 * Letter Z image.
 	 */
-	static const SDL_Surface *LETTER_Z;
+	public static final Util.SDL_Surface LETTER_Z = null;
 
 	/**
 	 * Total number of ASCII symbols.
 	 */
-	static const int NUMBER_OF_ASCII_SYMBOLS = 256;
+	public static final int NUMBER_OF_ASCII_SYMBOLS = 256;
 
 	/**
 	 * All available font symbols images at ASCII positions.
 	 */
-	static const SDL_Surface* SYMBOLS[ NUMBER_OF_ASCII_SYMBOLS ];
-
-public:
+	public static final Util.SDL_Surface SYMBOLS[] = new Util.SDL_Surface[NUMBER_OF_ASCII_SYMBOLS];
 
 	/**
 	 * Extract smaller part of a picture.
 	 *
-	 * @param fontImage Font sprite image.
+	 * @param fontImage
+	 *            Font sprite image.
 	 *
-	 * @param buffer Font smaller part image buffer. Memory is allocated inside.
+	 * @param buffer
+	 *            Font smaller part image buffer. Memory is allocated inside.
 	 *
-	 * @param left Smaller part left side coordinate.
+	 * @param left
+	 *            Smaller part left side coordinate.
 	 *
-	 * @param top Smaller part top side coordinate.
+	 * @param top
+	 *            Smaller part top side coordinate.
 	 *
-	 * @param width Smaller part width.
+	 * @param width
+	 *            Smaller part width.
 	 *
-	 * @param width Smaller part height.
+	 * @param width
+	 *            Smaller part height.
 	 *
 	 * @return Extracted image pointer.
 	 *
@@ -281,5 +285,8 @@ public:
 	 *
 	 * @date 10 May 2009
 	 */
-	static SDL_Surface* extractImage(SDL_Surface *fontImage, SDL_Surface *buffer, int left, int top, int width, int height);
-};
+	public static Util.SDL_Surface extractImage(Util.SDL_Surface fontImage,
+			Util.SDL_Surface buffer, int left, int top, int width, int height) {
+		return null;
+	}
+}

@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -31,21 +32,18 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 15 Sep 2008
  */
-class PayTable : public VisualComponent {
-public:
+class PayTable extends VisualComponent {
+
 	/**
 	 * Number of entries.
 	 */
-	static const int NUMBER_OF_ENTRIES = Prizes::NUMBER_OF_COMBINATIONS;
-
-private:
+	public static final int NUMBER_OF_ENTRIES = Prizes.NUMBER_OF_COMBINATIONS;
 
 	/**
 	 * Entry for pay table initializing.
 	 */
-	PayTableEntry entries[NUMBER_OF_ENTRIES];
+	private PayTableEntry entries[] = new PayTableEntry[NUMBER_OF_ENTRIES];
 
-public:
 	/**
 	 * Default constructor.
 	 *
@@ -55,12 +53,14 @@ public:
 	 *
 	 * @date 18 Sep 2008
 	 */
-	PayTable();
+	public PayTable() {
+	}
 
 	/**
 	 * Constructor.
 	 *
-	 * @param entries Array from PayTableEntry.
+	 * @param entries
+	 *            Array from PayTableEntry.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -68,12 +68,14 @@ public:
 	 *
 	 * @date 18 Sep 2008
 	 */
-	PayTable(PayTableEntry entries[NUMBER_OF_ENTRIES]);
+	public PayTable(PayTableEntry entries[]) {
+	}
 
 	/**
 	 * Entry getter.
 	 *
-	 * @param index Shows the entry of the array that will be taken
+	 * @param index
+	 *            Shows the entry of the array that will be taken
 	 *
 	 * @return Pay table entry.
 	 *
@@ -83,14 +85,18 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	PayTableEntry& getEntry(int index);
+	public PayTableEntry getEntry(int index) {
+		return null;
+	}
 
 	/**
 	 * Entry setter.
 	 *
-	 * @param entry Entry which is set.
+	 * @param entry
+	 *            Entry which is set.
 	 *
-	 * @param index Position in array, where entry should be set.
+	 * @param index
+	 *            Position in array, where entry should be set.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -98,18 +104,17 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	void setEntry(PayTableEntry &entry, int index);
+	public void setEntry(PayTableEntry entry, int index) {
+	}
 
 	/**
-	 * Draw pay table.
-	 * During the game draws the pay table entries
-	 * which is placed in the pay table.
-	 * Pay table entries present picture of every symbol,
-	 * symbol's meeting on the line
-	 * and calculated pay out values for every symbol.
-	 * Draws different pay table on every new game.
+	 * Draw pay table. During the game draws the pay table entries which is
+	 * placed in the pay table. Pay table entries present picture of every
+	 * symbol, symbol's meeting on the line and calculated pay out values for
+	 * every symbol. Draws different pay table on every new game.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -117,5 +122,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(TextCanvas* canvas);
-};
+	public void draw(TextCanvas canvas) {
+	}
+}

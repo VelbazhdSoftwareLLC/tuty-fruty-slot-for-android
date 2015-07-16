@@ -34,104 +34,104 @@ public:
 	/**
 	 * Resources directory path used length constant.
 	 */
-	static const int RESOURCE_PATH_LENGTH = 100;
+	static final int RESOURCE_PATH_LENGTH = 100;
 
 	/**
 	 * Desources direcotry path string.
 	 */
-	static const char RESOURCE_PATH[RESOURCE_PATH_LENGTH];
+	static final char RESOURCE_PATH[RESOURCE_PATH_LENGTH];
 
 	/**
 	 * Width of slot symbol.
 	 */
-	static const int WIDTH = 75;
+	static final int WIDTH = 75;
 
 	/**
 	 * Height of slot symbol.
 	 */
-	static const int HEIGHT = 63;
+	static final int HEIGHT = 63;
 
 	/**
 	 * Regular slot symbol 0 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_00;
+	static final SDL_Surface *REGULAR_SYMBOL_00;
 
 	/**
 	 * Regular slot symbol 1 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_01;
+	static final SDL_Surface *REGULAR_SYMBOL_01;
 
 	/**
 	 * Regular slot symbol 2 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_02;
+	static final SDL_Surface *REGULAR_SYMBOL_02;
 
 	/**
 	 * Regular slot symbol 3 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_03;
+	static final SDL_Surface *REGULAR_SYMBOL_03;
 
 	/**
 	 * Regular slot symbol 4 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_04;
+	static final SDL_Surface *REGULAR_SYMBOL_04;
 
 	/**
 	 * Regular slot symbol 5 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_05;
+	static final SDL_Surface *REGULAR_SYMBOL_05;
 
 	/**
 	 * Regular slot symbol 6 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_06;
+	static final SDL_Surface *REGULAR_SYMBOL_06;
 
 	/**
 	 * Regular slot symbol 7 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_07;
+	static final SDL_Surface *REGULAR_SYMBOL_07;
 
 	/**
 	 * Regular slot symbol 8 image.
 	 */
-	static const SDL_Surface *REGULAR_SYMBOL_08;
+	static final SDL_Surface *REGULAR_SYMBOL_08;
 
 	/**
 	 * Special slot symbol 0 image.
 	 */
-	static const SDL_Surface *SPECIAL_SYMBOL_00;
+	static final SDL_Surface *SPECIAL_SYMBOL_00;
 
 	/**
 	 * Number of regular slot symbols.
 	 */
-	static const int NUMBER_OF_REGULAR_SYMBOLS = 9;
+	static final int NUMBER_OF_REGULAR_SYMBOLS = 9;
 
 	/**
 	 * Regular slot symbols images.
 	 */
-	static const SDL_Surface* REGULAR_SYMBOLS[ NUMBER_OF_REGULAR_SYMBOLS ];
+	static final SDL_Surface* REGULAR_SYMBOLS[ NUMBER_OF_REGULAR_SYMBOLS ];
 
 	/**
 	 * Number of special slot symbols.
 	 */
-	static const int NUMBER_OF_SPECIAL_SYMBOLS = 1;
+	static final int NUMBER_OF_SPECIAL_SYMBOLS = 1;
 
 	/**
 	 * Special slot symbols images.
 	 */
-	static const SDL_Surface* SPECIAL_SYMBOLS[ NUMBER_OF_SPECIAL_SYMBOLS ];
+	static final SDL_Surface* SPECIAL_SYMBOLS[ NUMBER_OF_SPECIAL_SYMBOLS ];
 
 	/**
 	 * Total number of slot symbols.
 	 */
-	static const int NUMBER_OF_SLOT_SYMBOLS = NUMBER_OF_REGULAR_SYMBOLS + NUMBER_OF_SPECIAL_SYMBOLS;
+	static final int NUMBER_OF_SLOT_SYMBOLS = NUMBER_OF_REGULAR_SYMBOLS + NUMBER_OF_SPECIAL_SYMBOLS;
 
 	/**
 	 * All available slot symbols images.
 	 */
-	static const SDL_Surface* SYMBOLS[ NUMBER_OF_SLOT_SYMBOLS ];
+	static final SDL_Surface* SYMBOLS[ NUMBER_OF_SLOT_SYMBOLS ];
 
 public:
 
-	static SDL_Surface* extractImage(SDL_Surface *image, SDL_Surface *buffer, int left, int top, int width, int height);
-};
+	static SDL_Surface* extractImage(SDL_Surface *image, SDL_Surface *buffer, int left, int top, int width, int height){}
+}

@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -32,58 +33,53 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 06 Oct 2008
  */
-class GameScreen : public Screen {
-private:
+class GameScreen extends Screen {
 
 	/**
 	 * Game Screen visualization.
 	 */
-	Canvas *canvas;
-
-protected:
+	private Canvas canvas;
 
 	/**
 	 * Visual reels component.
 	 */
-	Reels reels;
+	protected Reels reels;
 
 	/**
 	 * Visual lines selector component.
 	 */
-	LinesSelector selector;
+	protected LinesSelector selector;
 
 	/**
 	 * Visual component which shows bet value.
 	 */
-	Bet bet;
+	protected Bet bet;
 
 	/**
 	 * Visual component which shows how many lines are selected.
 	 */
-	LinesSelected lines;
+	protected LinesSelected lines;
 
 	/**
 	 * Visual component which shows total bet value.
 	 */
-	TotalBet total;
+	protected TotalBet total;
 
 	/**
 	 * Visual component which shows how many credits are won.
 	 */
-	WinnerPaid paid;
+	protected WinnerPaid paid;
 
 	/**
 	 * Visual components which shows credit.
 	 */
-	Credit credit;
-
-public:
+	protected Credit credit;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param canvas Visual components in game screen will be drawn on text
-	 * canvas.
+	 * @param canvas
+	 *            Visual components in game screen will be drawn on text canvas.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -91,7 +87,8 @@ public:
 	 *
 	 * @date 06 Oct 2008
 	 */
-	GameScreen(Canvas* canvas);
+	public GameScreen(Canvas canvas) {
+	}
 
 	/**
 	 * Bet getter.
@@ -104,7 +101,9 @@ public:
 	 *
 	 * @date 26 Oct 2008
 	 */
-	Bet* getBet();
+	public Bet getBet() {
+		return null;
+	}
 
 	/**
 	 * Lines selector getter.
@@ -117,7 +116,9 @@ public:
 	 *
 	 * @date 26 Oct 2008
 	 */
-	LinesSelector* getSelector();
+	public LinesSelector getSelector() {
+		return null;
+	}
 
 	/**
 	 * User changed number of lines from the outside world.
@@ -128,7 +129,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void numberOfLinesChange();
+	public void numberOfLinesChange() {
+	}
 
 	/**
 	 * User changed bet from the outside world.
@@ -139,12 +141,14 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void betChange();
+	public void betChange() {
+	}
 
 	/**
 	 * User added credit from the outside world.
 	 *
-	 * @param amount Amount to be added.
+	 * @param amount
+	 *            Amount to be added.
 	 *
 	 * @author Todor Balabanov
 	 *
@@ -152,7 +156,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void addCredit(const long amount);
+	public void addCredit(final long amount) {
+	}
 
 	/**
 	 * Spin reels components on the game screen.
@@ -163,7 +168,8 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	void spinReels();
+	public void spinReels() {
+	}
 
 	/**
 	 * Update all components on the game screen.
@@ -174,7 +180,8 @@ public:
 	 *
 	 * @date 06 Oct 2008
 	 */
-	void update();
+	public void update() {
+	}
 
 	/**
 	 * Draw all components on the game screen.
@@ -185,9 +192,6 @@ public:
 	 *
 	 * @date 06 Oct 2008
 	 */
-	virtual void draw();
-
-};
-
-#endif
-
+	public void draw() {
+	}
+}

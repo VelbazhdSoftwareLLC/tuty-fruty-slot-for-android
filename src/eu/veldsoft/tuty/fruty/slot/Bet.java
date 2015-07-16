@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,11 +21,10 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Implements logic of the bet per line.
- * Player sets bet value. Bet value is limited by minimal and maximal bet.
- * This bet value can be incremented.
- * Incremention is done by fixed value.
- * This bet per line takes part for calculating the total bet.
+ * Implements logic of the bet per line. Player sets bet value. Bet value is
+ * limited by minimal and maximal bet. This bet value can be incremented.
+ * Incremention is done by fixed value. This bet per line takes part for
+ * calculating the total bet.
  *
  * @author Qna Dimova
  *
@@ -32,30 +32,26 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 10 Sep 2008
  */
-class Bet : public VisualComponent {
-private:
-
+class Bet extends VisualComponent {
 	/**
 	 * Bet value per line.
 	 */
-	long value;
-
-public:
+	private long value;
 
 	/**
 	 * Minimal bet constant.
 	 */
-	static long const MIN_BET = 1;
+	public static final long MIN_BET = 1;
 
 	/**
 	 * Maximal bet constant.
 	 */
-	static long const MAX_BET = 10;
+	public static final long MAX_BET = 10;
 
 	/**
 	 * Increasing bet step constant.
 	 */
-	static long const BET_STEP = 1;
+	public static final long BET_STEP = 1;
 
 	/**
 	 * Value getter.
@@ -68,12 +64,15 @@ public:
 	 *
 	 * @date 10 Sep 2008
 	 */
-	long getValue() const;
+	public long getValue() {
+		return 0;
+	}
 
 	/**
 	 * Value setter.
 	 *
-	 * @param value Value of bet.
+	 * @param value
+	 *            Value of bet.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -81,13 +80,14 @@ public:
 	 *
 	 * @date 10 Sep 2008
 	 */
-	void setValue(const long value);
+	public void setValue(final long value) {
+	}
 
 	/**
-	 * Increment bet value.
-	 * Incremention is done by fixed size bet step.
-	 * Bet step is the value of credits with which the user change the bet value.
-	 * When bet value is greater than maximum bet value, it sets minimal bet value.
+	 * Increment bet value. Incremention is done by fixed size bet step. Bet
+	 * step is the value of credits with which the user change the bet value.
+	 * When bet value is greater than maximum bet value, it sets minimal bet
+	 * value.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -95,14 +95,15 @@ public:
 	 *
 	 * @date 10 Sep 2008
 	 */
-	void cycleIncrement();
+	public void cycleIncrement() {
+	}
 
 	/**
-	 * Draw bet value.
-	 * If bet value is changed it draws the updated bet value.
+	 * Draw bet value. If bet value is changed it draws the updated bet value.
 	 * If bet value has not been changed it draws the unchanged bet value.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -110,5 +111,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	virtual void draw(Canvas* canvas);
-};
+	public void draw(Canvas canvas) {
+	}
+}

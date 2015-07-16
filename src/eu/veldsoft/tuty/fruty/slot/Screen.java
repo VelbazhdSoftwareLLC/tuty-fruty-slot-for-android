@@ -41,7 +41,7 @@ public:
 	 *
 	 * @date 06 Oct 2008
 	 */
-	virtual void update();
+	void update(){}
 
 	/**
 	 * Draw components on screen.
@@ -52,5 +52,5 @@ public:
 	 *
 	 * @date 06 Oct 2008
 	 */
-	virtual void draw();
-};
+	void draw(){}
+}

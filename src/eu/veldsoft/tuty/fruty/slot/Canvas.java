@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -29,30 +30,31 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 18 Apr 2009
  */
 class Canvas {
-public:
 
 	/**
 	 * Width constant.
 	 */
-	static const int WIDTH = 0;
+	public static final int WIDTH = 0;
 
 	/**
 	 * Height constant.
 	 */
-	static const int HEIGHT = 0;
-
-public:
+	public static final int HEIGHT = 0;
 
 	/**
 	 * Set single symbol on canvas.
 	 *
-	 * @param index Game symbols array index.
+	 * @param index
+	 *            Game symbols array index.
 	 *
-	 * @param string String to be drawn.
+	 * @param string
+	 *            String to be drawn.
 	 *
-	 * @param x Left side of the string.
+	 * @param x
+	 *            Left side of the string.
 	 *
-	 * @param y Top side of the string.
+	 * @param y
+	 *            Top side of the string.
 	 *
 	 * @author
 	 *
@@ -60,18 +62,23 @@ public:
 	 *
 	 * @date
 	 */
-	virtual void drawSymbol(int index, int x, int y) = 0;
+	public void drawSymbol(int index, int x, int y) {
+	}
 
 	/**
 	 * Set number on canvas.
 	 *
-	 * @param number Number to be drawn.
+	 * @param number
+	 *            Number to be drawn.
 	 *
-	 * @param x Left side of the number.
+	 * @param x
+	 *            Left side of the number.
 	 *
-	 * @param y Top side of the number.
+	 * @param y
+	 *            Top side of the number.
 	 *
-	 * @param digits Maximum number of digits.
+	 * @param digits
+	 *            Maximum number of digits.
 	 *
 	 * @author
 	 *
@@ -79,18 +86,23 @@ public:
 	 *
 	 * @date
 	 */
-	virtual void drawNumber(long number, int x, int y, int digits) = 0;
+	public void drawNumber(long number, int x, int y, int digits) {
+	}
 
 	/**
 	 * Set number on canvas.
 	 *
-	 * @param number Number to be drawn.
+	 * @param number
+	 *            Number to be drawn.
 	 *
-	 * @param x Left side of the number.
+	 * @param x
+	 *            Left side of the number.
 	 *
-	 * @param y Top side of the number.
+	 * @param y
+	 *            Top side of the number.
 	 *
-	 * @param digits Maximum number of digits.
+	 * @param digits
+	 *            Maximum number of digits.
 	 *
 	 * @author
 	 *
@@ -98,16 +110,20 @@ public:
 	 *
 	 * @date
 	 */
-	virtual void drawNumber(double number, int x, int y, int digits) = 0;
+	public void drawNumber(double number, int x, int y, int digits) {
+	}
 
 	/**
 	 * Set string on canvas.
 	 *
-	 * @param string String to be drawn.
+	 * @param string
+	 *            String to be drawn.
 	 *
-	 * @param x Left side of the string.
+	 * @param x
+	 *            Left side of the string.
 	 *
-	 * @param y Top side of the string.
+	 * @param y
+	 *            Top side of the string.
 	 *
 	 * @author
 	 *
@@ -115,7 +131,8 @@ public:
 	 *
 	 * @date
 	 */
-	virtual void drawString(const char* string, int x, int y) = 0;
+	public void drawString(final String string, int x, int y) {
+	}
 
 	/**
 	 * Draw background image.
@@ -126,7 +143,8 @@ public:
 	 *
 	 * @date
 	 */
-	virtual void drawBackground() = 0;
+	public void drawBackground() {
+	}
 
 	/**
 	 * Clean canvas.
@@ -137,7 +155,8 @@ public:
 	 *
 	 * @date
 	 */
-	virtual void clean() = 0;
+	public void clean() {
+	}
 
 	/**
 	 * Draw canvas.
@@ -148,5 +167,6 @@ public:
 	 *
 	 * @date
 	 */
-	virtual void draw() = 0;
-};
+	public void draw() {
+	}
+}

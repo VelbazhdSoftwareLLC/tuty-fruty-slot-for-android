@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -33,19 +34,17 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 15 Sep 2008
  */
 class PayTableEntry {
-private:
 
 	/**
 	 * Prize combination flag.
 	 */
-	const PrizeCombination *prizeCombination;
+	private final PrizeCombination prizeCombination = null;
 
 	/**
-	 * Value, calculated from bet per line and number of lines with a special function.
+	 * Value, calculated from bet per line and number of lines with a special
+	 * function.
 	 */
-	long value;
-
-public:
+	private long value;
 
 	/**
 	 * Default constructor.
@@ -56,7 +55,8 @@ public:
 	 *
 	 * @date 18 Sep 2008
 	 */
-	PayTableEntry();
+	public PayTableEntry() {
+	}
 
 	/**
 	 * Constructor.
@@ -67,7 +67,8 @@ public:
 	 *
 	 * @date 18 Sep 2008
 	 */
-	PayTableEntry(const PrizeCombination*, long value);
+	public PayTableEntry(final PrizeCombination prizeCombination, long value) {
+	}
 
 	/**
 	 * Prize combination getter.
@@ -80,12 +81,15 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	const PrizeCombination* getPrizeCombination() const;
+	public final PrizeCombination getPrizeCombination() {
+		return null;
+	}
 
 	/**
 	 * Prize combination setter.
 	 *
-	 * @param prizeCombination Prize combination flag.
+	 * @param prizeCombination
+	 *            Prize combination flag.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -93,7 +97,8 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	void setPrizeCombination(const PrizeCombination* prizeCombination);
+	public void setPrizeCombination(final PrizeCombination prizeCombination) {
+	}
 
 	/**
 	 * Value getter.
@@ -106,12 +111,15 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	long getValue() const;
+	public long getValue() {
+		return 0;
+	}
 
 	/**
 	 * Value setter.
 	 *
-	 * @param value Value, calculated from bet per line and number of lines.
+	 * @param value
+	 *            Value, calculated from bet per line and number of lines.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -119,5 +127,6 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	void setValue(const long value);
-};
+	public void setValue(final long value) {
+	}
+}

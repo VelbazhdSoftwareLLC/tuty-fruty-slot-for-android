@@ -34,12 +34,12 @@ public:
 	/**
 	 * Maximum number of prizes.
 	 */
-	static const int MAX_NUMBER_OF_PRIZES = 1000;
+	static final int MAX_NUMBER_OF_PRIZES = 1000;
 
 	/**
 	 * Size of prizes names.
 	 */
-	static const int SIZE_OF_PRIZES_NAMES = 100;
+	static final int SIZE_OF_PRIZES_NAMES = 100;
 
 private:
 
@@ -74,7 +74,7 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	PrizesFrequency();
+	PrizesFrequency(){}
 
 	/**
 	 * Initialize with zeros all counters.
@@ -85,7 +85,7 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void reset();
+	void reset(){}
 
 	/**
 	 * Increment frequency of given prize.
@@ -98,7 +98,7 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void increment(const char *name);
+	void increment(final char *name){}
 
 	/**
 	 * Increment number of spins.
@@ -109,7 +109,7 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void incrementSpins();
+	void incrementSpins(){}
 
 	/**
 	 * Number of spins getter.
@@ -122,7 +122,7 @@ public:
 	 *
 	 * @date 15 Oct 2008
 	 */
-	long getTotalNumberOfSpins() const;
+	long getTotalNumberOfSpins(){}
 
 	/**
 	 * Sort prizes frequencies by name.
@@ -133,7 +133,7 @@ public:
 	 *
 	 * @date 17 Oct 2008
 	 */
-	void sortByName();
+	void sortByName(){}
 
 	/**
 	 * Sort prizes frequencies by frequencies.
@@ -144,7 +144,7 @@ public:
 	 *
 	 * @date 17 Oct 2008
 	 */
-	void sortByFrequency();
+	void sortByFrequency(){}
 
 	/**
 	 * Print frequencies.
@@ -155,7 +155,7 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void print();
-};
+	void print(){}
+}
 
 extern PrizesFrequency frequency;

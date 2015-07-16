@@ -35,23 +35,23 @@ class ReelsDistribution : public ReelsBase {
 public:
 
 	/**
-	 * Number of symbols of a virtual reel.
+	 * Number of symbols of a reel.
 	 */
-	static const int DISTRIBUTION_SIZE = 256;
+	static final int DISTRIBUTION_SIZE = 256;
 
 	/**
 	 * Virtual reels, containing ordered symbols.
 	 */
-	static const ReelSymbol* DISTRIBUTION[ReelsBase::COLS][DISTRIBUTION_SIZE];
+	static final ReelSymbol* DISTRIBUTION[ReelsBase.COLS][DISTRIBUTION_SIZE];
 
 public:
 
 	/**
-	 * Select random symbols from virtual reels' distribution.
+	 * Select random symbols from reels' distribution.
 	 * Fill the visible part of reels with randomly choosed symbols from
-	 * virtual reels distribution.
+	 * reels distribution.
 	 * Initialize every mechanic reel with three subsequent symbols from
-	 * virtual reel's distribution.
+	 * reel's distribution.
 	 *
 	 * @param symbols Contain random symbols.
 	 *
@@ -63,5 +63,5 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	void selectRandomSymbols(ReelSymbol* symbols[ReelsBase::COLS][ReelsBase::ROWS]);
-};
+	void selectRandomSymbols(ReelSymbol* symbols[ReelsBase.COLS][ReelsBase.ROWS]){}
+}

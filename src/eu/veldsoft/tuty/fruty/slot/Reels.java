@@ -36,82 +36,82 @@ public:
 	/**
 	 * Symbol 1 constant.
 	 */
-	static const ReelSymbol SYMBOL_01;
+	static final ReelSymbol SYMBOL_01;
 
 	/**
 	 * Symbol 2 constant.
 	 */
-	static const ReelSymbol SYMBOL_02;
+	static final ReelSymbol SYMBOL_02;
 
 	/**
 	 * Symbol 3 constant.
 	 */
-	static const ReelSymbol SYMBOL_03;
+	static final ReelSymbol SYMBOL_03;
 
 	/**
 	 * Symbol 4 constant.
 	 */
-	static const ReelSymbol SYMBOL_04;
+	static final ReelSymbol SYMBOL_04;
 
 	/**
 	 * Symbol 5 constant.
 	 */
-	static const ReelSymbol SYMBOL_05;
+	static final ReelSymbol SYMBOL_05;
 
 	/**
 	 * Symbol 6 constant.
 	 */
-	static const ReelSymbol SYMBOL_06;
+	static final ReelSymbol SYMBOL_06;
 
 	/**
 	 * Symbol 7 constant.
 	 */
-	static const ReelSymbol SYMBOL_07;
+	static final ReelSymbol SYMBOL_07;
 
 	/**
 	 * Symbol 8 constant.
 	 */
-	static const ReelSymbol SYMBOL_08;
+	static final ReelSymbol SYMBOL_08;
 
 	/**
 	 * Symbol 9 constant.
 	 */
-	static const ReelSymbol SYMBOL_09;
+	static final ReelSymbol SYMBOL_09;
 
 	/**
 	 * Special symbol 1 constant.
 	 */
-	static const ReelSymbol SPECIAL_SYMBOL_01;
+	static final ReelSymbol SPECIAL_SYMBOL_01;
 
 	/**
 	 * Number of regular symbols constant.
 	 */
-	static const int REGULAR_NUMBER_OF_SYMBOLS = 9;
+	static final int REGULAR_NUMBER_OF_SYMBOLS = 9;
 
 	/**
 	 * Indexes of regular symbol constants.
 	 */
-	static const ReelSymbol* REGULAR_SYMBOLS[ REGULAR_NUMBER_OF_SYMBOLS ];
+	static final ReelSymbol* REGULAR_SYMBOLS[ REGULAR_NUMBER_OF_SYMBOLS ];
 
 	/**
 	 * Number of special symbols constant.
 	 */
-	static const int SPECIAL_NUMBER_OF_SYMBOLS = 1;
+	static final int SPECIAL_NUMBER_OF_SYMBOLS = 1;
 
 	/**
 	 * Indexes of special symbol constants.
 	 */
-	static const ReelSymbol* SPECIAL_SYMBOLS[ SPECIAL_NUMBER_OF_SYMBOLS ];
+	static final ReelSymbol* SPECIAL_SYMBOLS[ SPECIAL_NUMBER_OF_SYMBOLS ];
 
 	/**
 	 * Number of total symbols constant.
 	 */
-	static const int TOTAL_NUMBER_OF_SYMBOLS = 10;
+	static final int TOTAL_NUMBER_OF_SYMBOLS = 10;
 
 	/**
 	 * Indexes of total symbol constants.
 	 */
-	static const ReelSymbol* TOTAL_SYMBOLS[ TOTAL_NUMBER_OF_SYMBOLS ];
+	static final ReelSymbol* TOTAL_SYMBOLS[ TOTAL_NUMBER_OF_SYMBOLS ];
 
 private:
 
@@ -156,7 +156,7 @@ public:
 	 *
 	 * @date 05 Sep 2008
 	 */
-	Reels();
+	Reels(){}
 
 	/**
 	 * Reel symbol width getter.
@@ -169,7 +169,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getSymbolWidth();
+	int getSymbolWidth(){}
 
 	/**
 	 * Reel symbol width setter.
@@ -182,7 +182,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setSymbolWidth(int symbolWidth);
+	void setSymbolWidth(int symbolWidth){}
 
 	/**
 	 * Reel symbol height getter.
@@ -195,7 +195,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getSymbolHeight();
+	int getSymbolHeight(){}
 
 	/**
 	 * Reel symbol height setter.
@@ -208,7 +208,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setSymbolHeight(int symbolHeight);
+	void setSymbolHeight(int symbolHeight){}
 
 	/**
 	 * Vertical splitter width getter.
@@ -221,7 +221,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getVerticalSplitterWidth();
+	int getVerticalSplitterWidth(){}
 
 	/**
 	 * Vertical splitter width setter.
@@ -234,7 +234,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setVerticalSplitterWidth(int verticalSplitterWidth);
+	void setVerticalSplitterWidth(int verticalSplitterWidth){}
 
 	/**
 	 * Horizontal splitter height getter.
@@ -247,7 +247,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getHorizontalSplitterHeight();
+	int getHorizontalSplitterHeight(){}
 
 	/**
 	 * Horizontal splitter height setter.
@@ -260,7 +260,7 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setHorizontalSplitterHeight(int horizontalSplitterHeight);
+	void setHorizontalSplitterHeight(int horizontalSplitterHeight){}
 
 	/**
 	 * Visible part of the reels getter.
@@ -275,7 +275,7 @@ public:
 	 *
 	 * @date 05 Sep 2008
 	 */
-	void getVisibleCombination(ReelSymbol* combination[COLS][ROWS]);
+	void getVisibleCombination(ReelSymbol* combination[COLS][ROWS]){}
 
 	/**
 	 * Visible part of the reels setter.
@@ -288,7 +288,7 @@ public:
 	 *
 	 * @date 05 Sep 2008
 	 */
-	void setVisibleCombination(ReelSymbol* combination[COLS][ROWS]);
+	void setVisibleCombination(ReelSymbol* combination[COLS][ROWS]){}
 
 	/**
 	 * Spin reels.
@@ -299,7 +299,7 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	void spin();
+	void spin(){}
 
 	/**
 	 * Check particular prize combination as part of the reels.
@@ -314,7 +314,7 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	bool hasPrize(const PrizeCombination *combination);
+	boolean hasPrize(final PrizeCombination *combination){}
 
 	/**
 	 * Draw reels with their symbols.
@@ -329,5 +329,5 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas);
-};
+	void draw(Canvas* canvas){}
+}

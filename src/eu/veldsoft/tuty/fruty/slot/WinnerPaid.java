@@ -55,7 +55,7 @@ private:
 	/**
 	 * Pointers to all prizes already found.
 	 */
-	PrizeCombination const *found[ LinesSelector::LINES_AVAILABLE ];
+	PrizeCombination final *found[ LinesSelector.LINES_AVAILABLE ];
 
 private:
 
@@ -68,7 +68,7 @@ private:
 	 *
 	 * @date 11 Oct 2008
 	 */
-	void clearFound();
+	void clearFound(){}
 
 	/**
 	 * Add found prize to array with already found prizes.
@@ -79,7 +79,7 @@ private:
 	 *
 	 * @date 11 Oct 2008
 	 */
-	void addFound(const PrizeCombination *prize);
+	void addFound(final PrizeCombination *prize){}
 
 	/**
 	 * Check if prize is found in the array.
@@ -90,7 +90,7 @@ private:
 	 *
 	 * @date 11 Oct 2008
 	 */
-	bool isFound(const PrizeCombination *prize);
+	boolean isFound(final PrizeCombination *prize){}
 
 public:
 
@@ -110,7 +110,7 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	WinnerPaid(Bet *bet, LinesSelector *selector, Reels *reels);
+	WinnerPaid(Bet *bet, LinesSelector *selector, Reels *reels){}
 
 	/**
 	 * Winner's paid value getter.
@@ -123,7 +123,7 @@ public:
 	 *
 	 * @date 12 Sep 2008
 	 */
-	long getValue() const;
+	long getValue(){}
 
 	/**
 	 * Winner's paid value setter.
@@ -136,7 +136,7 @@ public:
 	 *
 	 * @date 12 Sep 2008
 	 */
-	void setValue(const long value);
+	void setValue(final long value){}
 
 	/**
 	 * Calculate winner paid value.
@@ -149,7 +149,7 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	long calculateWin();
+	long calculateWin(){}
 
 	/**
 	 * Draw winner paid value.
@@ -163,5 +163,5 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas);
-};
+	void draw(Canvas* canvas){}
+}

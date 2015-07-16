@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,12 +21,11 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Implements lines selected component.
- * The component shows to the player how many lines are selected.
- * Selected lines are these lines on which player can win depending on
- * the number of meetings of symbols over the line.
- * Player can change the number of selected lines.
- * Holds the counter which shows how many lines are selected.
+ * Implements lines selected component. The component shows to the player how
+ * many lines are selected. Selected lines are these lines on which player can
+ * win depending on the number of meetings of symbols over the line. Player can
+ * change the number of selected lines. Holds the counter which shows how many
+ * lines are selected.
  *
  * @author Stanislav Petrov
  *
@@ -33,19 +33,18 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 10 Sep 2008
  */
-class LinesSelected : public VisualComponent {
-private:
+class LinesSelected extends VisualComponent {
+
 	/**
 	 * Lines selector pointer.
 	 */
-	LinesSelector *selector;
-
-public:
+	private LinesSelector selector;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param linesSelector Lines selector as source of data.
+	 * @param linesSelector
+	 *            Lines selector as source of data.
 	 *
 	 * @author Todor Balabanov
 	 *
@@ -53,7 +52,8 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	LinesSelected(LinesSelector *selector);
+	public LinesSelected(LinesSelector selector) {
+	}
 
 	/**
 	 * Lines selector pointer getter.
@@ -66,14 +66,16 @@ public:
 	 *
 	 * @date 10 Sep 2008
 	 */
-	LinesSelector* getSelector();
+	public LinesSelector getSelector() {
+		return null;
+	}
 
 	/**
-	 * Draw the number of the selected lines.
-	 * When new lines are selected,
-	 * it shows the updated number of selected lines.
+	 * Draw the number of the selected lines. When new lines are selected, it
+	 * shows the updated number of selected lines.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -81,5 +83,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas);
-};
+	public void draw(Canvas canvas) {
+	}
+}

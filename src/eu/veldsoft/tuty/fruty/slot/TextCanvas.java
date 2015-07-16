@@ -21,7 +21,7 @@ package eu.veldsoft.tuty.fruty.slot;
 
 /**
  * Simulate drawing components on the console. Holds width and height of the
- * drawing field. Go to xy-coordinats with virtual markers. Draws numbers,
+ * drawing field. Go to xy-coordinats with markers. Draws numbers,
  * symbols on the drawing field with the specified coordinates. Prints text
  * symbols on console.
  *
@@ -37,12 +37,12 @@ public:
 	/**
 	 * Width of text canvas constant.
 	 */
-	static const int WIDTH = 80;
+	static final int WIDTH = 80;
 
 	/**
 	 * Height of text canvas constant.
 	 */
-	static const int HEIGHT = 24;
+	static final int HEIGHT = 24;
 
 private:
 
@@ -72,7 +72,7 @@ public:
 	 *
 	 * @date 10 Oct 2008
 	 */
-	TextCanvas();
+	TextCanvas(){}
 
 	/**
 	 * Canvas getter.
@@ -87,7 +87,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	char** getCanvas(char canvas[WIDTH][HEIGHT]);
+	char** getCanvas(char canvas[WIDTH][HEIGHT]){}
 
 	/**
 	 * Canvas setter.
@@ -100,10 +100,10 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setCanvas(const char canvas[WIDTH][HEIGHT]);
+	void setCanvas(final char canvas[WIDTH][HEIGHT]){}
 
 	/**
-	 * Get virtual currnet marker x position.
+	 * Get currnet marker x position.
 	 *
 	 * @return Currnet x position.
 	 *
@@ -113,10 +113,10 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	int getMarkerX() const;
+	int getMarkerX(){}
 
 	/**
-	 * Get virtual currnet marker y position.
+	 * Get currnet marker y position.
 	 *
 	 * @return Currnet y position.
 	 *
@@ -126,7 +126,7 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	int getMarkerY() const;
+	int getMarkerY(){}
 
 	/**
 	 * Set single symbol on canvas.
@@ -139,7 +139,7 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawSymbol(int index, int x, int y);
+	void drawSymbol(int index, int x, int y){}
 
 	/**
 	 * Set number on canvas.
@@ -152,7 +152,7 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawNumber(long number, int x, int y, int digits);
+	void drawNumber(long number, int x, int y, int digits){}
 
 	/**
 	 * Set number on canvas.
@@ -165,7 +165,7 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawNumber(double number, int x, int y, int digits);
+	void drawNumber(double number, int x, int y, int digits){}
 
 	/**
 	 * Set string on canvas.
@@ -178,15 +178,15 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawString(const char* string, int x, int y);
+	void drawString(final char* string, int x, int y){}
 
 	/**
 	 * Go to given position on canvas. If coordinates are invalid old
 	 * coordinates will be used.
 	 *
-	 * @param x New x position of the virtual marker.
+	 * @param x New x position of the marker.
 	 *
-	 * @param y New y position of the virtual marker.
+	 * @param y New y position of the marker.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -194,7 +194,7 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void goToXy(const int x, const int y);
+	void goToXy(final int x, final int y){}
 
 	/**
 	 * Draw background image.
@@ -205,7 +205,7 @@ public:
 	 *
 	 * @date
 	 */
-	void drawBackground();
+	void drawBackground(){}
 
 	/**
 	 * Clean text canvas.
@@ -216,7 +216,7 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void clean();
+	void clean(){}
 
 	/**
 	 * Print text buffer into console.
@@ -227,5 +227,5 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw();
-};
+	void draw(){}
+}

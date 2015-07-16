@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -29,24 +30,21 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 13 Oct 2008
  */
 class PayoutPercent {
-private:
 
 	/**
 	 * Sum all bets which player has done.
 	 */
-	long sumBet;
+	private long sumBet;
 
 	/**
 	 * Sum all wins which player has done.
 	 */
-	long sumWin;
+	private long sumWin;
 
 	/**
 	 * Pay out percent value.
 	 */
-	double value;
-
-private:
+	private double value;
 
 	/**
 	 * Update pay out percent value.
@@ -57,9 +55,8 @@ private:
 	 *
 	 * @date 13 Oct 2008
 	 */
-	void update();
-
-public:
+	private void update() {
+	}
 
 	/**
 	 * Reset sum win, sum bet and pay out percent value.
@@ -70,7 +67,8 @@ public:
 	 *
 	 * @date 13 Oct 2008
 	 */
-	void reset();
+	public void reset() {
+	}
 
 	/**
 	 * Increase the sum of bet.
@@ -81,7 +79,8 @@ public:
 	 *
 	 * @date 13 Oct 2008
 	 */
-	void increaseSumBet(long sumBet);
+	public void increaseSumBet(long sumBet) {
+	}
 
 	/**
 	 * Increase the sum of win.
@@ -92,7 +91,8 @@ public:
 	 *
 	 * @date 13 Oct 2008
 	 */
-	void increaseSumWin(long sumWin);
+	public void increaseSumWin(long sumWin) {
+	}
 
 	/**
 	 * Pay out percent value getter.
@@ -103,7 +103,7 @@ public:
 	 *
 	 * @date 13 Oct 2008
 	 */
-	double getValue();
-};
-
-extern PayoutPercent percent;
+	public double getValue() {
+		return 0.0;
+	}
+}

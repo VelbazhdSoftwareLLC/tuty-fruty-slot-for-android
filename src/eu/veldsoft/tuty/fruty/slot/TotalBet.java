@@ -66,7 +66,7 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	TotalBet(Bet *bet, LinesSelected *lines);
+	TotalBet(Bet *bet, LinesSelected *lines){}
 
 	/**
 	 * Value of a total bet getter.
@@ -79,7 +79,7 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	long getValue() const;
+	long getValue(){}
 
 	/**
 	 * Update total bet value.
@@ -92,7 +92,7 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	void update();
+	void update(){}
 
 	/**
 	 * Draw total bet value.
@@ -106,5 +106,5 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas);
-};
+	void draw(Canvas* canvas){}
+}

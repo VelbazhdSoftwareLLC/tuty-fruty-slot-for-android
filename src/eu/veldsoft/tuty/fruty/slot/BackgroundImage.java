@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -29,30 +30,29 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 21 May 2009
  */
 class BackgroundImage {
-public:
 
 	/**
 	 * Resources directory path used length constant.
 	 */
-	static const int RESOURCE_PATH_LENGTH = 100;
+	public static final int RESOURCE_PATH_LENGTH = 100;
 
 	/**
 	 * Desources direcotry path string.
 	 */
-	static const char RESOURCE_PATH[RESOURCE_PATH_LENGTH];
+	public static final String RESOURCE_PATH = "";
 
 	/**
 	 * Width of background.
 	 */
-	static const int WIDTH = 0;
+	public static final int WIDTH = 0;
 
 	/**
 	 * Height of background.
 	 */
-	static const int HEIGHT = 0;
+	public static final int HEIGHT = 0;
 
 	/**
 	 * Background image.
 	 */
-	static const SDL_Surface *BACKGROUND;
-};
+	public static final Util.SDL_Surface BACKGROUND = null;
+}

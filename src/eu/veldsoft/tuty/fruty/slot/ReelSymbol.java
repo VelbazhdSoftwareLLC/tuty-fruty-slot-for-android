@@ -34,7 +34,7 @@ public:
 	/**
 	 * Reel symbol name size.
 	 */
-	static const int NAME_SIZE = 15;
+	static final int NAME_SIZE = 15;
 
 private:
 
@@ -56,7 +56,7 @@ public:
 	 *
 	 * @date 27 Oct 2008
 	 */
-	ReelSymbol(const char name[NAME_SIZE + 1]);
+	ReelSymbol(final char name[NAME_SIZE + 1]){}
 
 	/**
 	 * Reel symbol name getter.
@@ -71,5 +71,5 @@ public:
 	 *
 	 * @date 27 Oct 2008
 	 */
-	char* getName(char name[NAME_SIZE + 1]) const;
-};
+	char* getName(char name[NAME_SIZE + 1]){}
+}

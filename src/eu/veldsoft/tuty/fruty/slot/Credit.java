@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,11 +21,10 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Implements logic of the credits.
- * Player has credits to set bet value per line.
- * Gives information to player about the credit amount he has.
- * Credit is incremented when player puts some cash for additional credit.
- * When the player bets a value per line the credit is decremented with the relevant amount.
+ * Implements logic of the credits. Player has credits to set bet value per
+ * line. Gives information to player about the credit amount he has. Credit is
+ * incremented when player puts some cash for additional credit. When the player
+ * bets a value per line the credit is decremented with the relevant amount.
  *
  * @author Qna Dimova
  *
@@ -32,15 +32,12 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 11 Sep 2008
  */
-class Credit : public VisualComponent {
-private:
+class Credit extends VisualComponent {
 
 	/**
 	 * Credit value.
 	 */
-	long value;
-
-public:
+	private long value;
 
 	/**
 	 * Credit value getter.
@@ -53,12 +50,15 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	long getValue() const;
+	public long getValue() {
+		return 0;
+	}
 
 	/**
 	 * Credit value setter.
 	 *
-	 * @param value Value of credit.
+	 * @param value
+	 *            Value of credit.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -66,14 +66,15 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	void setValue(const long value);
+	public void setValue(final long value) {
+	}
 
 	/**
-	 * Increment credit value.
-	 * Incrementation is done by amount.
-	 * Amount is a cash which player puts in the slot machine.
+	 * Increment credit value. Incrementation is done by amount. Amount is a
+	 * cash which player puts in the slot machine.
 	 *
-	 * @param amount Value with which player increment the credit value.
+	 * @param amount
+	 *            Value with which player increment the credit value.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -81,13 +82,13 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	void increment(const long amount);
+	public void increment(final long amount) {
+	}
 
 	/**
-	 * Decrements credit value.
-	 * Decrementation is done by amount.
-	 * Amount is cash when player takes credits when he wants to get the won credits or
-	 * when he wants to bet.
+	 * Decrements credit value. Decrementation is done by amount. Amount is cash
+	 * when player takes credits when he wants to get the won credits or when he
+	 * wants to bet.
 	 *
 	 * @param amount
 	 *
@@ -97,14 +98,16 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	void decrement(const long amount);
+	public void decrement(final long amount) {
+	}
 
 	/**
-	 * Draw credit value.
-	 * If credit value is changed it draws the updated credit value.
-	 * If credit value has not been changed it draws the unchanged credit value.
+	 * Draw credit value. If credit value is changed it draws the updated credit
+	 * value. If credit value has not been changed it draws the unchanged credit
+	 * value.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -112,5 +115,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas);
-};
+	public void draw(Canvas canvas) {
+	}
+}

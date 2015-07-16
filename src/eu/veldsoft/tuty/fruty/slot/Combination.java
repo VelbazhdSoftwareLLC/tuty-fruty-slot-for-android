@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,10 +21,10 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Implements logic of the lines, on which player will play.
- * Combination shows how exactly a line is built. When player choose a line to
- * play on, combination knows how exactly the line is represented on the visible
- * part of the reels. Check if two combinations are the same.
+ * Implements logic of the lines, on which player will play. Combination shows
+ * how exactly a line is built. When player choose a line to play on,
+ * combination knows how exactly the line is represented on the visible part of
+ * the reels. Check if two combinations are the same.
  *
  * @author Qna Dimova
  *
@@ -32,14 +33,10 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 08 Sep 2008
  */
 class Combination {
-private:
-
 	/**
 	 * Holds information about how a line is built.
 	 */
-	unsigned char mask[ReelsBase::COLS][ReelsBase::ROWS];
-
-public:
+	private char mask[][] = new char[ReelsBase.COLS][ReelsBase.ROWS];
 
 	/**
 	 * Default constructor.
@@ -50,12 +47,14 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	Combination();
+	public Combination() {
+	}
 
 	/**
 	 * Constructor.
 	 *
-	 * @param mask Line container.
+	 * @param mask
+	 *            Line container.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -63,12 +62,14 @@ public:
 	 *
 	 * @date 15 Sep 2008
 	 */
-	Combination(unsigned char mask[ReelsBase::COLS][ReelsBase::ROWS]);
+	public Combination(char mask[][]) {
+	}
 
 	/**
 	 * Bit mask getter.
 	 *
-	 * @param mask The mask store getted value.
+	 * @param mask
+	 *            The mask store getted value.
 	 *
 	 * @return Mask that indicates the line.
 	 *
@@ -78,12 +79,15 @@ public:
 	 *
 	 * @date 08 Sep 2008
 	 */
-	unsigned char ** getMask(unsigned char mask[ReelsBase::COLS][ReelsBase::ROWS]);
+	public char[][] getMask(char mask[][]) {
+		return null;
+	}
 
 	/**
 	 * Bit mask setter.
 	 *
-	 * @param mask The mask to set.
+	 * @param mask
+	 *            The mask to set.
 	 *
 	 * @author Qna Dimova
 	 *
@@ -91,13 +95,15 @@ public:
 	 *
 	 * @date 08 Sep 2008
 	 */
-	void setMask(unsigned char const mask[ReelsBase::COLS][ReelsBase::ROWS]);
+	public void setMask(final char mask[][]) {
+	}
 
 	/**
 	 * Compare two combinations.
 	 *
-	 * @param combination External combination to be compared with the internal
-	 * combination.
+	 * @param combination
+	 *            External combination to be compared with the internal
+	 *            combination.
 	 *
 	 * @return True if combinations are equal, false - otherwise.
 	 *
@@ -107,5 +113,7 @@ public:
 	 *
 	 * @date 02 Sep 2008
 	 */
-	bool equals(const Combination combination) const;
-};
+	public boolean equals(final Combination combination) {
+		return false;
+	}
+}

@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -31,29 +32,26 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 02 Oct 2008
  */
 class GameConfig {
-public:
 
 	/**
 	 * Text mode constant.
 	 */
-	static const int TEXT_MODE = 1;
+	public static final int TEXT_MODE = 1;
 
 	/**
 	 * Graphic mode constant.
 	 */
-	static const int GRAPHIC_MODE = 2;
+	public static final int GRAPHIC_MODE = 2;
 
 	/**
 	 * Game vizualization mode.
 	 */
-	static int videoMode;
+	public static int videoMode;
 
 	/**
 	 * Control game simulation.
 	 */
-	static bool simulation;
-
-public:
+	public static boolean simulation;
 
 	/**
 	 * Changes value of the variable that controls game simulation.
@@ -64,5 +62,6 @@ public:
 	 *
 	 * @date 26 Oct 2008
 	 */
-	static void switchSimulation();
-};
+	public static void switchSimulation() {
+	}
+}

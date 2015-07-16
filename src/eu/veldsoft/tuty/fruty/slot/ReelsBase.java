@@ -34,10 +34,10 @@ public:
 	/**
 	 * Number of rows constant.
 	 */
-	static const int ROWS = 3;
+	static final int ROWS = 3;
 
 	/**
 	 * Number of columns constant.
 	 */
-	static const int COLS = 5;
-};
+	static final int COLS = 5;
+}

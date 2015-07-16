@@ -29,4 +29,4 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 12 Oct 2008
  */
 class SplashScreen : public Screen {
-};
+}

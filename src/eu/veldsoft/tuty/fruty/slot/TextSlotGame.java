@@ -43,7 +43,7 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	TextSlotGame();
+	TextSlotGame(){}
 
 	/**
 	 * Initializing all game visual components.
@@ -54,7 +54,7 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	virtual void initialize();
+	void initialize(){}
 
 	/**
 	 * Game loop.
@@ -65,7 +65,7 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	virtual void loop();
+	void loop(){}
 
 	/**
 	 * Finalize the game.
@@ -77,7 +77,7 @@ public:
 	 * @date 08 Oct 2008
 	 */
 	@Override
-	virtual void finalize();
+	void finalize(){}
 
 	/**
 	 * Destructor.
@@ -88,5 +88,5 @@ public:
 	 *
 	 * @date
 	 */
-	~TextSlotGame();
-};
+	~TextSlotGame(){}
+}

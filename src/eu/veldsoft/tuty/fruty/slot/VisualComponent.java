@@ -67,7 +67,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getX() const;
+	int getX(){}
 
 	/**
 	 * X-coordinate setter.
@@ -80,7 +80,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setX(const int x);
+	void setX(final int x){}
 
 	/**
 	 * Y-coordinate getter.
@@ -93,7 +93,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getY() const;
+	int getY(){}
 
 	/**
 	 * Y-coordinate setter.
@@ -106,7 +106,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setY(const int y);
+	void setY(final int y){}
 
 	/**
 	 * Width getter.
@@ -119,7 +119,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getWidth() const;
+	int getWidth(){}
 
 	/**
 	 * Width setter.
@@ -132,7 +132,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setWidth(const int width);
+	void setWidth(final int width){}
 
 	/**
 	 * Height getter.
@@ -145,7 +145,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getHeight() const;
+	int getHeight(){}
 
 	/**
 	 * Height setter.
@@ -158,7 +158,7 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setHeight(const int height);
+	void setHeight(final int height){}
 
 	/**
 	 * Draw visual compoment.
@@ -172,5 +172,5 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	virtual void draw(TextCanvas* canvas);
-};
+	void draw(TextCanvas* canvas){}
+}
