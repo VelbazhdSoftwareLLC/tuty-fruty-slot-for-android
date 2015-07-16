@@ -29,41 +29,36 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 14 Oct 2008
  */
 class PrizesFrequency {
-public:
 
 	/**
 	 * Maximum number of prizes.
 	 */
-	static final int MAX_NUMBER_OF_PRIZES = 1000;
+	public static final int MAX_NUMBER_OF_PRIZES = 1000;
 
 	/**
 	 * Size of prizes names.
 	 */
-	static final int SIZE_OF_PRIZES_NAMES = 100;
-
-private:
+	public static final int SIZE_OF_PRIZES_NAMES = 100;
 
 	/**
 	 * Number of prizes under frequency test.
 	 */
-	int numberOfPrizes;
+	private int numberOfPrizes;
 
 	/**
 	 * List of the prizes under frequency test.
 	 */
-	char prizes[MAX_NUMBER_OF_PRIZES][SIZE_OF_PRIZES_NAMES];
+	private char prizes[][] = new char[MAX_NUMBER_OF_PRIZES][SIZE_OF_PRIZES_NAMES];
 
 	/**
 	 * It contain count of frequencies.
 	 */
-	long counters[MAX_NUMBER_OF_PRIZES];
+	private long counters[] = new long[MAX_NUMBER_OF_PRIZES];
 
 	/**
 	 * Total number of spins.
 	 */
-	long totalNumberOfSpins;
-
-public:
+	private long totalNumberOfSpins;
 
 	/**
 	 * Default constructor.
@@ -74,7 +69,8 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	PrizesFrequency(){}
+	public PrizesFrequency() {
+	}
 
 	/**
 	 * Initialize with zeros all counters.
@@ -85,12 +81,14 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void reset(){}
+	public void reset() {
+	}
 
 	/**
 	 * Increment frequency of given prize.
 	 *
-	 * @param name Name of the prize which frequency should be increment.
+	 * @param name
+	 *            Name of the prize which frequency should be increment.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -98,7 +96,8 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void increment(final char *name){}
+	public void increment(String name) {
+	}
 
 	/**
 	 * Increment number of spins.
@@ -109,7 +108,8 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void incrementSpins(){}
+	public void incrementSpins() {
+	}
 
 	/**
 	 * Number of spins getter.
@@ -122,7 +122,9 @@ public:
 	 *
 	 * @date 15 Oct 2008
 	 */
-	long getTotalNumberOfSpins(){}
+	public long getTotalNumberOfSpins() {
+		return 0;
+	}
 
 	/**
 	 * Sort prizes frequencies by name.
@@ -133,7 +135,8 @@ public:
 	 *
 	 * @date 17 Oct 2008
 	 */
-	void sortByName(){}
+	public void sortByName() {
+	}
 
 	/**
 	 * Sort prizes frequencies by frequencies.
@@ -144,7 +147,8 @@ public:
 	 *
 	 * @date 17 Oct 2008
 	 */
-	void sortByFrequency(){}
+	public void sortByFrequency() {
+	}
 
 	/**
 	 * Print frequencies.
@@ -155,7 +159,6 @@ public:
 	 *
 	 * @date 14 Oct 2008
 	 */
-	void print(){}
+	public void print() {
+	}
 }
-
-extern PrizesFrequency frequency;
