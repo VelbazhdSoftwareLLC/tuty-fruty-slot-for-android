@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -31,8 +32,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 03 Oct 2008
  */
-class TextSlotGame : public SlotGame {
-public:
+class TextSlotGame extends SlotGame {
 
 	/**
 	 * Default constructor.
@@ -43,7 +43,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	TextSlotGame(){}
+	public TextSlotGame() {
+	}
 
 	/**
 	 * Initializing all game visual components.
@@ -54,7 +55,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void initialize(){}
+	public void initialize() {
+	}
 
 	/**
 	 * Game loop.
@@ -65,7 +67,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void loop(){}
+	public void loop() {
+	}
 
 	/**
 	 * Finalize the game.
@@ -77,16 +80,6 @@ public:
 	 * @date 08 Oct 2008
 	 */
 	@Override
-	void finalize(){}
-
-	/**
-	 * Destructor.
-	 *
-	 * @author
-	 *
-	 * @email
-	 *
-	 * @date
-	 */
-	~TextSlotGame(){}
+	protected void finalize() {
+	}
 }

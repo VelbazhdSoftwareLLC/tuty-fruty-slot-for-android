@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,12 +21,10 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Implements logic of the total bet.
- * Holds bet value per line.
- * Holds selected lines and their number.
- * Holds total bet value and updates total bet value.
- * The total bet value is calculated by multiplying
- * number of lines and bet value per line.
+ * Implements logic of the total bet. Holds bet value per line. Holds selected
+ * lines and their number. Holds total bet value and updates total bet value.
+ * The total bet value is calculated by multiplying number of lines and bet
+ * value per line.
  *
  * @author Qna Dimova
  *
@@ -33,32 +32,31 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 11 Sep 2008
  */
-class TotalBet : public VisualComponent {
-private:
+class TotalBet extends VisualComponent {
 
 	/**
 	 * Bet pointer.
 	 */
-	Bet *bet;
+	private Bet bet;
 
 	/**
 	 * Lines selected pointer.
 	 */
-	LinesSelected *lines;
+	private LinesSelected lines;
 
 	/**
 	 * Value of total bet.
 	 */
-	long value;
-
-public:
+	private long value;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param bet Source for bet value.
+	 * @param bet
+	 *            Source for bet value.
 	 *
-	 * @param lines Source for number of lines.
+	 * @param lines
+	 *            Source for number of lines.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -66,7 +64,8 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	TotalBet(Bet *bet, LinesSelected *lines){}
+	public TotalBet(Bet bet, LinesSelected lines) {
+	}
 
 	/**
 	 * Value of a total bet getter.
@@ -79,12 +78,13 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	long getValue(){}
+	public long getValue() {
+		return 0;
+	}
 
 	/**
-	 * Update total bet value.
-	 * Total bet value depends on bet value per line
-	 * and number of selected lines.
+	 * Update total bet value. Total bet value depends on bet value per line and
+	 * number of selected lines.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -92,13 +92,15 @@ public:
 	 *
 	 * @date 11 Sep 2008
 	 */
-	void update(){}
+	public void update() {
+	}
 
 	/**
-	 * Draw total bet value.
-	 * For every game it draws the updated total bet value.
+	 * Draw total bet value. For every game it draws the updated total bet
+	 * value.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -106,5 +108,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas){}
+	public void draw(Canvas canvas) {
+	}
 }

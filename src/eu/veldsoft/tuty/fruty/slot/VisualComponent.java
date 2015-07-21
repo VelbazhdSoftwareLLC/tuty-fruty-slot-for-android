@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,10 +21,9 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Base class for drawing visual components.
- * Holds x,y-coordinates of a component.
- * Holds height and width of a component.
- * Defines that the component should be drawn.
+ * Base class for drawing visual components. Holds x,y-coordinates of a
+ * component. Holds height and width of a component. Defines that the component
+ * should be drawn.
  *
  * @author Darina Evtimova
  *
@@ -32,29 +32,26 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 19 Sep 2008
  */
 class VisualComponent {
-protected:
 
 	/**
 	 * X-coordinate of visual component.
 	 */
-	int x;
+	protected int x;
 
 	/**
 	 * Y-coordinate of visual component.
 	 */
-	int y;
+	protected int y;
 
 	/**
 	 * Width of visual component.
 	 */
-	int width;
+	protected int width;
 
 	/**
 	 * Height of visual component.
 	 */
-	int height;
-
-public:
+	protected int height;
 
 	/**
 	 * X-coordinate getter.
@@ -67,12 +64,15 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getX(){}
+	public int getX() {
+		return 0;
+	}
 
 	/**
 	 * X-coordinate setter.
 	 *
-	 * @param x X-coordinate of visual component.
+	 * @param x
+	 *            X-coordinate of visual component.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -80,7 +80,8 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setX(final int x){}
+	public void setX(final int x) {
+	}
 
 	/**
 	 * Y-coordinate getter.
@@ -93,12 +94,15 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getY(){}
+	public int getY() {
+		return 0;
+	}
 
 	/**
 	 * Y-coordinate setter.
 	 *
-	 * @param y Y-coordinate of visual component.
+	 * @param y
+	 *            Y-coordinate of visual component.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -106,7 +110,8 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setY(final int y){}
+	public void setY(final int y) {
+	}
 
 	/**
 	 * Width getter.
@@ -119,12 +124,15 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getWidth(){}
+	public int getWidth() {
+		return 0;
+	}
 
 	/**
 	 * Width setter.
 	 *
-	 * @param width Width of visual component.
+	 * @param width
+	 *            Width of visual component.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -132,7 +140,8 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setWidth(final int width){}
+	public void setWidth(final int width) {
+	}
 
 	/**
 	 * Height getter.
@@ -145,12 +154,15 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	int getHeight(){}
+	public int getHeight() {
+		return 0;
+	}
 
 	/**
 	 * Height setter.
 	 *
-	 * @param height Height of visual component.
+	 * @param height
+	 *            Height of visual component.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -158,13 +170,14 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setHeight(final int height){}
+	public void setHeight(final int height) {
+	}
 
 	/**
-	 * Draw visual compoment.
-	 * Just declare that the component should be drawn.
+	 * Draw visual compoment. Just declare that the component should be drawn.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Darina Evtimova
 	 *
@@ -172,5 +185,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(TextCanvas* canvas){}
+	public void draw(TextCanvas canvas) {
+	}
 }

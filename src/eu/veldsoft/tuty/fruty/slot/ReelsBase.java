@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -28,16 +29,14 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 09 Oct 2008
  */
-class ReelsBase {
-public:
-
+interface ReelsBase {
 	/**
 	 * Number of rows constant.
 	 */
-	static final int ROWS = 3;
+	public static final int ROWS = 3;
 
 	/**
 	 * Number of columns constant.
 	 */
-	static final int COLS = 5;
+	public static final int COLS = 5;
 }

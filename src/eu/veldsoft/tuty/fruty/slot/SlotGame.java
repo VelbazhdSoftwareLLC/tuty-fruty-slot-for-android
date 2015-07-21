@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -32,54 +33,50 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 03 Oct 2008
  */
 class SlotGame {
-public:
 
 	/**
 	 * Splash screen constant flag.
 	 */
-	static final  char SPLASH_SCREEN = 0;
+	public static final char SPLASH_SCREEN = 0;
 
 	/**
 	 * Game screen constant flag.
 	 */
-	static final  char GAME_SCREEN = 1;
+	public static final char GAME_SCREEN = 1;
 
 	/**
 	 * Pay table screen constant flag.
 	 */
-	static final  char PAYTABLE_SCREEN = 2;
+	public static final char PAYTABLE_SCREEN = 2;
 
 	/**
 	 * Help screen constant flag.
 	 */
-	static final  char HELP_SCREEN = 3;
+	public static final char HELP_SCREEN = 3;
 
-protected:
 	/**
 	 * Drawing screen on console.
 	 */
-	Canvas *canvas;
+	protected Canvas canvas;
 
 	/**
 	 * Flag indicating which screen is shown at the moment.
 	 */
-	 char activeScreen;
+	protected char activeScreen;
 
-	//TODO Splash screen.
+	// TODO Splash screen.
 
 	/**
 	 * Holds information about all game screen visual components.
 	 */
-	GameScreen *gameScreen;
+	protected GameScreen gameScreen;
 
 	/**
 	 * Holds informaton about pay table.
 	 */
-	PayTableScreen *payTableScreen;
+	protected PayTableScreen payTableScreen;
 
-	//TODO Help screen.
-
-protected:
+	// TODO Help screen.
 
 	/**
 	 * Print statistics.
@@ -90,9 +87,8 @@ protected:
 	 *
 	 * @date 17 Oct 2008
 	 */
-	void printStatistics(){}
-
-public:
+	protected void printStatistics() {
+	}
 
 	/**
 	 * Default constructor.
@@ -103,7 +99,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	SlotGame(){}
+	public SlotGame() {
+	}
 
 	/**
 	 * Initializing all game visual components.
@@ -114,7 +111,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void initialize(){}
+	public void initialize() {
+	}
 
 	/**
 	 * Game loop.
@@ -125,7 +123,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void loop(){}
+	public void loop() {
+	}
 
 	/**
 	 * Finalize the game.
@@ -137,6 +136,6 @@ public:
 	 * @date 08 Oct 2008
 	 */
 	@Override
-	protected void finzlize() {
+	protected void finalize() {
 	}
 }

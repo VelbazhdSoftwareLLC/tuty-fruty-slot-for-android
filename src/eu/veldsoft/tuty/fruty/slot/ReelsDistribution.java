@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,10 +21,9 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Implements the testing of the symbols' combination.
- * Fills the reels with special arranging of symbols.
- * As a result it holds symbol's distribution on every reel.
- * Holds number of elements of every reel.
+ * Implements the testing of the symbols' combination. Fills the reels with
+ * special arranging of symbols. As a result it holds symbol's distribution on
+ * every reel. Holds number of elements of every reel.
  *
  * @author Stanislav Petrov
  *
@@ -31,29 +31,26 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 08 Sep 2008
  */
-class ReelsDistribution : public ReelsBase {
-public:
+class ReelsDistribution implements ReelsBase {
 
 	/**
 	 * Number of symbols of a reel.
 	 */
-	static final int DISTRIBUTION_SIZE = 256;
+	public static final int DISTRIBUTION_SIZE = 256;
 
 	/**
 	 * Virtual reels, containing ordered symbols.
 	 */
-	static final ReelSymbol* DISTRIBUTION[ReelsBase.COLS][DISTRIBUTION_SIZE];
-
-public:
+	public static final ReelSymbol DISTRIBUTION[][] = new ReelSymbol[ReelsBase.COLS][DISTRIBUTION_SIZE];
 
 	/**
-	 * Select random symbols from reels' distribution.
-	 * Fill the visible part of reels with randomly choosed symbols from
-	 * reels distribution.
-	 * Initialize every mechanic reel with three subsequent symbols from
-	 * reel's distribution.
+	 * Select random symbols from reels' distribution. Fill the visible part of
+	 * reels with randomly choosed symbols from reels distribution. Initialize
+	 * every mechanic reel with three subsequent symbols from reel's
+	 * distribution.
 	 *
-	 * @param symbols Contain random symbols.
+	 * @param symbols
+	 *            Contain random symbols.
 	 *
 	 * @return Selected random symbols from distribution.
 	 *
@@ -63,5 +60,6 @@ public:
 	 *
 	 * @date 09 Sep 2008
 	 */
-	void selectRandomSymbols(ReelSymbol* symbols[ReelsBase.COLS][ReelsBase.ROWS]){}
+	public void selectRandomSymbols(ReelSymbol symbols[][]) {
+	}
 }

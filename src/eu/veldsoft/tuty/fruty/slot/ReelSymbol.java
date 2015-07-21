@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -29,26 +30,22 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 27 Oct 2008
  */
 class ReelSymbol {
-public:
 
 	/**
 	 * Reel symbol name size.
 	 */
-	static final int NAME_SIZE = 15;
-
-private:
+	public static final int NAME_SIZE = 15;
 
 	/**
 	 * Name of reel symbol. Plus one for null at the end.
 	 */
-	char name[NAME_SIZE + 1];
-
-public:
+	private String name;
 
 	/**
 	 * Reel symbol constructor.
 	 *
-	 * @param name Name to be set. Plus one for null at the end.
+	 * @param name
+	 *            Name to be set. Plus one for null at the end.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -56,12 +53,14 @@ public:
 	 *
 	 * @date 27 Oct 2008
 	 */
-	ReelSymbol(final char name[NAME_SIZE + 1]){}
+	public ReelSymbol(final String name) {
+	}
 
 	/**
 	 * Reel symbol name getter.
 	 *
-	 * @param name Name to be set. Plus one for null at the end.
+	 * @param name
+	 *            Name to be set. Plus one for null at the end.
 	 *
 	 * @return Reel symbol name.
 	 *
@@ -71,5 +70,7 @@ public:
 	 *
 	 * @date 27 Oct 2008
 	 */
-	char* getName(char name[NAME_SIZE + 1]){}
+	public String getName(String name) {
+		return "";
+	}
 }

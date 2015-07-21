@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -20,10 +21,9 @@ package eu.veldsoft.tuty.fruty.slot;
  ******************************************************************************/
 
 /**
- * Implements the logic of the visible part of the reels.
- * Holds number of all defined symbols and special symbols.
- * Holds all symbols.
- * Define the visible combination of symbols when the reels stop spinning.
+ * Implements the logic of the visible part of the reels. Holds number of all
+ * defined symbols and special symbols. Holds all symbols. Define the visible
+ * combination of symbols when the reels stop spinning.
  *
  * @author Stanislav Petrov
  *
@@ -31,121 +31,117 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 05 Sep 2008
  */
-class Reels : public VisualComponent, public ReelsBase {
-public:
+class Reels extends VisualComponent implements ReelsBase {
+
 	/**
 	 * Symbol 1 constant.
 	 */
-	static final ReelSymbol SYMBOL_01;
+	public static final ReelSymbol SYMBOL_01 = null;
 
 	/**
 	 * Symbol 2 constant.
 	 */
-	static final ReelSymbol SYMBOL_02;
+	public static final ReelSymbol SYMBOL_02 = null;
 
 	/**
 	 * Symbol 3 constant.
 	 */
-	static final ReelSymbol SYMBOL_03;
+	public static final ReelSymbol SYMBOL_03 = null;
 
 	/**
 	 * Symbol 4 constant.
 	 */
-	static final ReelSymbol SYMBOL_04;
+	public static final ReelSymbol SYMBOL_04 = null;
 
 	/**
 	 * Symbol 5 constant.
 	 */
-	static final ReelSymbol SYMBOL_05;
+	public static final ReelSymbol SYMBOL_05 = null;
 
 	/**
 	 * Symbol 6 constant.
 	 */
-	static final ReelSymbol SYMBOL_06;
+	public static final ReelSymbol SYMBOL_06 = null;
 
 	/**
 	 * Symbol 7 constant.
 	 */
-	static final ReelSymbol SYMBOL_07;
+	public static final ReelSymbol SYMBOL_07 = null;
 
 	/**
 	 * Symbol 8 constant.
 	 */
-	static final ReelSymbol SYMBOL_08;
+	public static final ReelSymbol SYMBOL_08 = null;
 
 	/**
 	 * Symbol 9 constant.
 	 */
-	static final ReelSymbol SYMBOL_09;
+	public static final ReelSymbol SYMBOL_09 = null;
 
 	/**
 	 * Special symbol 1 constant.
 	 */
-	static final ReelSymbol SPECIAL_SYMBOL_01;
+	public static final ReelSymbol SPECIAL_SYMBOL_01 = null;
 
 	/**
 	 * Number of regular symbols constant.
 	 */
-	static final int REGULAR_NUMBER_OF_SYMBOLS = 9;
+	public static final int REGULAR_NUMBER_OF_SYMBOLS = 9;
 
 	/**
 	 * Indexes of regular symbol constants.
 	 */
-	static final ReelSymbol* REGULAR_SYMBOLS[ REGULAR_NUMBER_OF_SYMBOLS ];
+	public static final ReelSymbol REGULAR_SYMBOLS[] = new ReelSymbol[REGULAR_NUMBER_OF_SYMBOLS];
 
 	/**
 	 * Number of special symbols constant.
 	 */
-	static final int SPECIAL_NUMBER_OF_SYMBOLS = 1;
+	public static final int SPECIAL_NUMBER_OF_SYMBOLS = 1;
 
 	/**
 	 * Indexes of special symbol constants.
 	 */
-	static final ReelSymbol* SPECIAL_SYMBOLS[ SPECIAL_NUMBER_OF_SYMBOLS ];
+	public static final ReelSymbol SPECIAL_SYMBOLS[] = new ReelSymbol[SPECIAL_NUMBER_OF_SYMBOLS];
 
 	/**
 	 * Number of total symbols constant.
 	 */
-	static final int TOTAL_NUMBER_OF_SYMBOLS = 10;
+	public static final int TOTAL_NUMBER_OF_SYMBOLS = 10;
 
 	/**
 	 * Indexes of total symbol constants.
 	 */
-	static final ReelSymbol* TOTAL_SYMBOLS[ TOTAL_NUMBER_OF_SYMBOLS ];
-
-private:
+	public static final ReelSymbol TOTAL_SYMBOLS[] = new ReelSymbol[TOTAL_NUMBER_OF_SYMBOLS];
 
 	/**
 	 * Reel symbol width.
 	 */
-	int symbolWidth;
+	private int symbolWidth;
 
 	/**
 	 * Reel symbol height.
 	 */
-	int symbolHeight;
+	private int symbolHeight;
 
 	/**
 	 * Reels vertical splitter width.
 	 */
-	int verticalSplitterWidth;
+	private int verticalSplitterWidth;
 
 	/**
 	 * Reels horizontal splitter height.
 	 */
-	int horizontalSplitterHeight;
+	private int horizontalSplitterHeight;
 
 	/**
 	 * Visible part of the reels.
 	 */
-	ReelSymbol* visibleCombination[COLS][ROWS];
+	private ReelSymbol visibleCombination[][] = new ReelSymbol[COLS][ROWS];
 
 	/**
 	 * Source of discrette probability distribution.
 	 */
-	ReelsDistribution distribution;
-
-public:
+	private ReelsDistribution distribution;
 
 	/**
 	 * Constructor.
@@ -156,7 +152,8 @@ public:
 	 *
 	 * @date 05 Sep 2008
 	 */
-	Reels(){}
+	public Reels() {
+	}
 
 	/**
 	 * Reel symbol width getter.
@@ -169,12 +166,15 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getSymbolWidth(){}
+	public int getSymbolWidth() {
+		return 0;
+	}
 
 	/**
 	 * Reel symbol width setter.
 	 *
-	 * @param symbolWidth Reel symbol width.
+	 * @param symbolWidth
+	 *            Reel symbol width.
 	 *
 	 * @author Todor Balabanov
 	 *
@@ -182,7 +182,8 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setSymbolWidth(int symbolWidth){}
+	public void setSymbolWidth(int symbolWidth) {
+	}
 
 	/**
 	 * Reel symbol height getter.
@@ -195,12 +196,15 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getSymbolHeight(){}
+	public int getSymbolHeight() {
+		return 0;
+	}
 
 	/**
 	 * Reel symbol height setter.
 	 *
-	 * @param symbolHeight Reel symbol height.
+	 * @param symbolHeight
+	 *            Reel symbol height.
 	 *
 	 * @author Todor Balabanov
 	 *
@@ -208,7 +212,8 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setSymbolHeight(int symbolHeight){}
+	public void setSymbolHeight(int symbolHeight) {
+	}
 
 	/**
 	 * Vertical splitter width getter.
@@ -221,12 +226,15 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getVerticalSplitterWidth(){}
+	public int getVerticalSplitterWidth() {
+		return 0;
+	}
 
 	/**
 	 * Vertical splitter width setter.
 	 *
-	 * @param verticalSplitterWidth Vertical splitter width.
+	 * @param verticalSplitterWidth
+	 *            Vertical splitter width.
 	 *
 	 * @author Todor Balabanov
 	 *
@@ -234,7 +242,8 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setVerticalSplitterWidth(int verticalSplitterWidth){}
+	public void setVerticalSplitterWidth(int verticalSplitterWidth) {
+	}
 
 	/**
 	 * Horizontal splitter height getter.
@@ -247,12 +256,15 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	int getHorizontalSplitterHeight(){}
+	public int getHorizontalSplitterHeight() {
+		return 0;
+	}
 
 	/**
 	 * Horizontal splitter height setter.
 	 *
-	 * @param horizontalSplitterHeight Horizontal splitter height.
+	 * @param horizontalSplitterHeight
+	 *            Horizontal splitter height.
 	 *
 	 * @author Todor Balabanov
 	 *
@@ -260,12 +272,14 @@ public:
 	 *
 	 * @date 21 Jun 2009
 	 */
-	void setHorizontalSplitterHeight(int horizontalSplitterHeight){}
+	public void setHorizontalSplitterHeight(int horizontalSplitterHeight) {
+	}
 
 	/**
 	 * Visible part of the reels getter.
 	 *
-	 * @param combination Result return variable.
+	 * @param combination
+	 *            Result return variable.
 	 *
 	 * @return Visible combination.
 	 *
@@ -275,12 +289,14 @@ public:
 	 *
 	 * @date 05 Sep 2008
 	 */
-	void getVisibleCombination(ReelSymbol* combination[COLS][ROWS]){}
+	public void getVisibleCombination(ReelSymbol combination[][]) {
+	}
 
 	/**
 	 * Visible part of the reels setter.
 	 *
-	 * @param combination Combination to be set inside the object.
+	 * @param combination
+	 *            Combination to be set inside the object.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -288,7 +304,8 @@ public:
 	 *
 	 * @date 05 Sep 2008
 	 */
-	void setVisibleCombination(ReelSymbol* combination[COLS][ROWS]){}
+	public void setVisibleCombination(ReelSymbol combination[][]) {
+	}
 
 	/**
 	 * Spin reels.
@@ -299,12 +316,14 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	void spin(){}
+	public void spin() {
+	}
 
 	/**
 	 * Check particular prize combination as part of the reels.
 	 *
-	 * @param combinaton Combinaton to be checked.
+	 * @param combinaton
+	 *            Combinaton to be checked.
 	 *
 	 * @return True if combination is winning, false otherwise.
 	 *
@@ -314,14 +333,16 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	boolean hasPrize(final PrizeCombination *combination){}
+	public boolean hasPrize(final PrizeCombination combination) {
+		return false;
+	}
 
 	/**
-	 * Draw reels with their symbols.
-	 * Draws visible part of the reels.
-	 * When player spins the reels, visible part of reels is repainting.
+	 * Draw reels with their symbols. Draws visible part of the reels. When
+	 * player spins the reels, visible part of reels is repainting.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -329,5 +350,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas){}
+	public void draw(Canvas canvas) {
+	}
 }

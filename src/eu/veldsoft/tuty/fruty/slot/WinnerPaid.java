@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -29,35 +30,32 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 12 Sep 2008
  */
-class WinnerPaid : public VisualComponent {
-private:
+class WinnerPaid extends VisualComponent {
 
 	/**
 	 * Paid value to winner.
 	 */
-	long value;
+	private long value;
 
 	/**
 	 * Bet value used to calculate winner paid value.
 	 */
-	Bet *bet;
+	private Bet bet;
 
 	/**
 	 * Source for selected lines.
 	 */
-	LinesSelector *selector;
+	private LinesSelector selector;
 
 	/**
 	 * Source for reels state.
 	 */
-	Reels *reels;
+	private Reels reels;
 
 	/**
 	 * Pointers to all prizes already found.
 	 */
-	PrizeCombination final *found[ LinesSelector.LINES_AVAILABLE ];
-
-private:
+	private final PrizeCombination found[] = new PrizeCombination[LinesSelector.LINES_AVAILABLE];
 
 	/**
 	 * Clear array with found pointers.
@@ -68,7 +66,8 @@ private:
 	 *
 	 * @date 11 Oct 2008
 	 */
-	void clearFound(){}
+	private void clearFound() {
+	}
 
 	/**
 	 * Add found prize to array with already found prizes.
@@ -79,7 +78,8 @@ private:
 	 *
 	 * @date 11 Oct 2008
 	 */
-	void addFound(final PrizeCombination *prize){}
+	private void addFound(final PrizeCombination prize) {
+	}
 
 	/**
 	 * Check if prize is found in the array.
@@ -90,19 +90,22 @@ private:
 	 *
 	 * @date 11 Oct 2008
 	 */
-	boolean isFound(final PrizeCombination *prize){}
-
-public:
+	private boolean isFound(final PrizeCombination prize) {
+		return false;
+	}
 
 	/**
 	 * Constructor.
 	 *
-	 * @param bet Source for bet value.
+	 * @param bet
+	 *            Source for bet value.
 	 *
-	 * @param selector Gives information about selected lines and their prize
-	 * combinations.
+	 * @param selector
+	 *            Gives information about selected lines and their prize
+	 *            combinations.
 	 *
-	 * @param reels Source for reels state.
+	 * @param reels
+	 *            Source for reels state.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -110,7 +113,8 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	WinnerPaid(Bet *bet, LinesSelector *selector, Reels *reels){}
+	public WinnerPaid(Bet bet, LinesSelector selector, Reels reels) {
+	}
 
 	/**
 	 * Winner's paid value getter.
@@ -123,12 +127,15 @@ public:
 	 *
 	 * @date 12 Sep 2008
 	 */
-	long getValue(){}
+	public long getValue() {
+		return 0;
+	}
 
 	/**
 	 * Winner's paid value setter.
 	 *
-	 * @param value Winner's paid value.
+	 * @param value
+	 *            Winner's paid value.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -136,7 +143,8 @@ public:
 	 *
 	 * @date 12 Sep 2008
 	 */
-	void setValue(final long value){}
+	public void setValue(final long value) {
+	}
 
 	/**
 	 * Calculate winner paid value.
@@ -149,13 +157,16 @@ public:
 	 *
 	 * @date 09 Oct 2008
 	 */
-	long calculateWin(){}
+	public long calculateWin() {
+		return 0;
+	}
 
 	/**
-	 * Draw winner paid value.
-	 * When player wins, winner paid value is drawn on the screen.
+	 * Draw winner paid value. When player wins, winner paid value is drawn on
+	 * the screen.
 	 *
-	 * @param canvas Text drawing area pointer.
+	 * @param canvas
+	 *            Text drawing area pointer.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -163,5 +174,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(Canvas* canvas){}
+	public void draw(Canvas canvas) {
+	}
 }

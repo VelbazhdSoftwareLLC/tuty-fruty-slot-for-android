@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -29,109 +30,110 @@ package eu.veldsoft.tuty.fruty.slot;
  * @date 14 May 2009
  */
 class SymbolsImages {
-public:
 
 	/**
 	 * Resources directory path used length constant.
 	 */
-	static final int RESOURCE_PATH_LENGTH = 100;
+	public static final int RESOURCE_PATH_LENGTH = 100;
 
 	/**
 	 * Desources direcotry path string.
 	 */
-	static final char RESOURCE_PATH[RESOURCE_PATH_LENGTH];
+	public static final String RESOURCE_PATH = "";
 
 	/**
 	 * Width of slot symbol.
 	 */
-	static final int WIDTH = 75;
+	public static final int WIDTH = 75;
 
 	/**
 	 * Height of slot symbol.
 	 */
-	static final int HEIGHT = 63;
+	public static final int HEIGHT = 63;
 
 	/**
 	 * Regular slot symbol 0 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_00;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_00 = null;
 
 	/**
 	 * Regular slot symbol 1 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_01;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_01 = null;
 
 	/**
 	 * Regular slot symbol 2 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_02;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_02 = null;
 
 	/**
 	 * Regular slot symbol 3 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_03;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_03 = null;
 
 	/**
 	 * Regular slot symbol 4 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_04;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_04 = null;
 
 	/**
 	 * Regular slot symbol 5 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_05;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_05 = null;
 
 	/**
 	 * Regular slot symbol 6 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_06;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_06 = null;
 
 	/**
 	 * Regular slot symbol 7 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_07;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_07 = null;
 
 	/**
 	 * Regular slot symbol 8 image.
 	 */
-	static final SDL_Surface *REGULAR_SYMBOL_08;
+	public static final Util.SDL_Surface REGULAR_SYMBOL_08 = null;
 
 	/**
 	 * Special slot symbol 0 image.
 	 */
-	static final SDL_Surface *SPECIAL_SYMBOL_00;
+	public static final Util.SDL_Surface SPECIAL_SYMBOL_00 = null;
 
 	/**
 	 * Number of regular slot symbols.
 	 */
-	static final int NUMBER_OF_REGULAR_SYMBOLS = 9;
+	public static final int NUMBER_OF_REGULAR_SYMBOLS = 9;
 
 	/**
 	 * Regular slot symbols images.
 	 */
-	static final SDL_Surface* REGULAR_SYMBOLS[ NUMBER_OF_REGULAR_SYMBOLS ];
+	public static final Util.SDL_Surface REGULAR_SYMBOLS[] = new Util.SDL_Surface[NUMBER_OF_REGULAR_SYMBOLS];
 
 	/**
 	 * Number of special slot symbols.
 	 */
-	static final int NUMBER_OF_SPECIAL_SYMBOLS = 1;
+	public static final int NUMBER_OF_SPECIAL_SYMBOLS = 1;
 
 	/**
 	 * Special slot symbols images.
 	 */
-	static final SDL_Surface* SPECIAL_SYMBOLS[ NUMBER_OF_SPECIAL_SYMBOLS ];
+	public static final Util.SDL_Surface SPECIAL_SYMBOLS[] = new Util.SDL_Surface[NUMBER_OF_SPECIAL_SYMBOLS];
 
 	/**
 	 * Total number of slot symbols.
 	 */
-	static final int NUMBER_OF_SLOT_SYMBOLS = NUMBER_OF_REGULAR_SYMBOLS + NUMBER_OF_SPECIAL_SYMBOLS;
+	public static final int NUMBER_OF_SLOT_SYMBOLS = NUMBER_OF_REGULAR_SYMBOLS
+			+ NUMBER_OF_SPECIAL_SYMBOLS;
 
 	/**
 	 * All available slot symbols images.
 	 */
-	static final SDL_Surface* SYMBOLS[ NUMBER_OF_SLOT_SYMBOLS ];
+	public static final Util.SDL_Surface SYMBOLS[] = new Util.SDL_Surface[NUMBER_OF_SLOT_SYMBOLS];
 
-public:
-
-	static SDL_Surface* extractImage(SDL_Surface *image, SDL_Surface *buffer, int left, int top, int width, int height){}
+	public static Util.SDL_Surface extractImage(Util.SDL_Surface image,
+			Util.SDL_Surface buffer, int left, int top, int width, int height) {
+		return null;
+	}
 }

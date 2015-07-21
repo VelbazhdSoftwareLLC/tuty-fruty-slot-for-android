@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -21,9 +22,9 @@ package eu.veldsoft.tuty.fruty.slot;
 
 /**
  * Simulate drawing components on the console. Holds width and height of the
- * drawing field. Go to xy-coordinats with markers. Draws numbers,
- * symbols on the drawing field with the specified coordinates. Prints text
- * symbols on console.
+ * drawing field. Go to xy-coordinats with markers. Draws numbers, symbols on
+ * the drawing field with the specified coordinates. Prints text symbols on
+ * console.
  *
  * @author Stanislav Petrov
  *
@@ -31,37 +32,32 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 19 Sep 2008
  */
-class TextCanvas : public Canvas {
-public:
+class TextCanvas extends Canvas {
 
 	/**
 	 * Width of text canvas constant.
 	 */
-	static final int WIDTH = 80;
+	public static final int WIDTH = 80;
 
 	/**
 	 * Height of text canvas constant.
 	 */
-	static final int HEIGHT = 24;
-
-private:
+	public static final int HEIGHT = 24;
 
 	/**
 	 * Text buffer for printing visual components.
 	 */
-	char canvas[WIDTH][HEIGHT];
+	private char canvas[][] = new char[WIDTH][HEIGHT];
 
 	/**
 	 * Virtual marker x coordinate.
 	 */
-	int markerX;
+	private int markerX;
 
 	/**
 	 * Virtual marker y coordinate.
 	 */
-	int markerY;
-
-public:
+	private int markerY;
 
 	/**
 	 * Default constructor.
@@ -72,12 +68,14 @@ public:
 	 *
 	 * @date 10 Oct 2008
 	 */
-	TextCanvas(){}
+	public TextCanvas() {
+	}
 
 	/**
 	 * Canvas getter.
 	 *
-	 * @param canvas Output canvas matrix.
+	 * @param canvas
+	 *            Output canvas matrix.
 	 *
 	 * @return Visible part of the canvas.
 	 *
@@ -87,12 +85,15 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	char** getCanvas(char canvas[WIDTH][HEIGHT]){}
+	public char[][] getCanvas(char canvas[][]) {
+		return null;
+	}
 
 	/**
 	 * Canvas setter.
 	 *
-	 * @param canvas Input canvas matrix.
+	 * @param canvas
+	 *            Input canvas matrix.
 	 *
 	 * @author Stanislav Petrov
 	 *
@@ -100,7 +101,8 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void setCanvas(final char canvas[WIDTH][HEIGHT]){}
+	public void setCanvas(final char canvas[][]) {
+	}
 
 	/**
 	 * Get currnet marker x position.
@@ -113,7 +115,9 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	int getMarkerX(){}
+	public int getMarkerX() {
+		return 0;
+	}
 
 	/**
 	 * Get currnet marker y position.
@@ -126,12 +130,15 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	int getMarkerY(){}
+	public int getMarkerY() {
+		return 0;
+	}
 
 	/**
 	 * Set single symbol on canvas.
 	 *
-	 * @param symbol Symbol to be drawn.
+	 * @param symbol
+	 *            Symbol to be drawn.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -139,12 +146,14 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawSymbol(int index, int x, int y){}
+	public void drawSymbol(int index, int x, int y) {
+	}
 
 	/**
 	 * Set number on canvas.
 	 *
-	 * @param number Number to be drawn.
+	 * @param number
+	 *            Number to be drawn.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -152,12 +161,14 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawNumber(long number, int x, int y, int digits){}
+	public void drawNumber(long number, int x, int y, int digits) {
+	}
 
 	/**
 	 * Set number on canvas.
 	 *
-	 * @param number Number to be drawn.
+	 * @param number
+	 *            Number to be drawn.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -165,12 +176,14 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawNumber(double number, int x, int y, int digits){}
+	public void drawNumber(double number, int x, int y, int digits) {
+	}
 
 	/**
 	 * Set string on canvas.
 	 *
-	 * @param string String to be drawn.
+	 * @param string
+	 *            String to be drawn.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -178,15 +191,18 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void drawString(final char* string, int x, int y){}
+	public void drawString(String string, int x, int y) {
+	}
 
 	/**
 	 * Go to given position on canvas. If coordinates are invalid old
 	 * coordinates will be used.
 	 *
-	 * @param x New x position of the marker.
+	 * @param x
+	 *            New x position of the marker.
 	 *
-	 * @param y New y position of the marker.
+	 * @param y
+	 *            New y position of the marker.
 	 *
 	 * @author Anton Dimitrov
 	 *
@@ -194,7 +210,8 @@ public:
 	 *
 	 * @date 26 Sep 2008
 	 */
-	void goToXy(final int x, final int y){}
+	public void goToXy(final int x, final int y) {
+	}
 
 	/**
 	 * Draw background image.
@@ -205,7 +222,8 @@ public:
 	 *
 	 * @date
 	 */
-	void drawBackground(){}
+	public void drawBackground() {
+	}
 
 	/**
 	 * Clean text canvas.
@@ -216,7 +234,8 @@ public:
 	 *
 	 * @date 08 Oct 2008
 	 */
-	void clean(){}
+	public void clean() {
+	}
 
 	/**
 	 * Print text buffer into console.
@@ -227,5 +246,6 @@ public:
 	 *
 	 * @date 19 Sep 2008
 	 */
-	void draw(){}
+	public void draw() {
+	}
 }

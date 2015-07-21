@@ -1,4 +1,5 @@
 package eu.veldsoft.tuty.fruty.slot;
+
 /*******************************************************************************
  *                                                                             *
  * Tuty-Fruty Slot is simple non gambling slot machine game.                   *
@@ -28,5 +29,5 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 12 Oct 2008
  */
-class SplashScreen : public Screen {
+class SplashScreen extends Screen {
 }
