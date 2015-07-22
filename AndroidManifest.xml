@@ -10,6 +10,17 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <supports-screens
+        android:anyDensity="true"
+        android:compatibleWidthLimitDp="640"
+        android:largeScreens="true"
+        android:largestWidthLimitDp="720"
+        android:normalScreens="false"
+        android:requiresSmallestWidthDp="640"
+        android:resizeable="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -34,7 +45,8 @@
         </activity>
         <activity
             android:name=".SlotActivity"
-            android:label="@string/title_activity_slot" >
+            android:label="@string/title_activity_slot"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name=".HelpActivity"
