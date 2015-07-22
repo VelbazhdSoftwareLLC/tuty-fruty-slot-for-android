@@ -7,12 +7,22 @@
 
     <ImageView
         android:id="@+id/backgroud_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:src="@drawable/background" />
-    
+
+    <ImageView
+        android:id="@+id/symbol00"
+        android:layout_width="75dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/symbol00" />
+
 </RelativeLayout>
