@@ -4,5 +4,12 @@
     <string name="redirect_activity_is_missing_message">Redirect activity is missing!</string>
     <string name="app_name">Tuty Fruty Slot for Android</string>
     <string name="title_activity_splash">Tuty Fruty Slot for Android</string>
+    <string name="title_activity_slot">Tuty Fruty Slot for Android</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_about">About</string>
+    <string name="help_option">Help</string>
+    <string name="about_option">About</string>
+    <string name="help_text"></string>
+    <string name="about_text"></string>
 
 </resources>
