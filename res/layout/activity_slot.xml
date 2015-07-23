@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/backgroud_image"
-        android:layout_width="640dp"
-        android:layout_height="480dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="0dp"
@@ -17,12 +17,183 @@
 
     <ImageView
         android:id="@+id/symbol00"
-        android:layout_width="75dp"
-        android:layout_height="64dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="63dp"
         android:src="@drawable/symbol00" />
 
+    <ImageView
+        android:id="@+id/symbol10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="63dp"
+        android:src="@drawable/symbol01" />
+
+    <ImageView
+        android:id="@+id/symbol20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="63dp"
+        android:src="@drawable/symbol02" />
+
+    <ImageView
+        android:id="@+id/symbol30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="63dp"
+        android:src="@drawable/symbol03" />
+
+    <ImageView
+        android:id="@+id/symbol40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="214dp"
+        android:layout_marginTop="63dp"
+        android:src="@drawable/symbol04" />
+  
+    <ImageView
+        android:id="@+id/symbol01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/symbol05" />
+
+    <ImageView
+        android:id="@+id/symbol11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/symbol06" />
+
+    <ImageView
+        android:id="@+id/symbol21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/symbol07" />
+
+    <ImageView
+        android:id="@+id/symbol31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/symbol08" />
+
+    <ImageView
+        android:id="@+id/symbol41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="214dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/symbol09" />
+    
+    <ImageView
+        android:id="@+id/symbol02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="136dp"
+        android:src="@drawable/symbol00" />
+
+    <ImageView
+        android:id="@+id/symbol12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="136dp"
+        android:src="@drawable/symbol01" />
+
+    <ImageView
+        android:id="@+id/symbol22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="136dp"
+        android:src="@drawable/symbol02" />
+
+    <ImageView
+        android:id="@+id/symbol32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="136dp"
+        android:src="@drawable/symbol03" />
+
+    <ImageView
+        android:id="@+id/symbol42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="214dp"
+        android:layout_marginTop="136dp"
+        android:src="@drawable/symbol04" />
+
+    <TextView
+        android:id="@+id/single_bet_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="194dp"
+        android:text="00"
+        android:textColor="@color/digits_color" />
+
+    <TextView
+        android:id="@+id/active_lines_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="194dp"
+        android:text="00"
+        android:textColor="@color/digits_color" />
+
+    <TextView
+        android:id="@+id/total_bet_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="194dp"
+        android:text="0000"
+        android:textColor="@color/digits_color" />
+
+    <TextView
+        android:id="@+id/winner_paied_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="194dp"
+        android:text="000000"
+        android:textColor="@color/digits_color" />
+
+    <TextView
+        android:id="@+id/credit_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="194dp"
+        android:text="000000"
+        android:textColor="@color/digits_color" />
+
+    <Button
+        android:id="@+id/spin_button"
+        android:layout_width="45sp"
+        android:layout_height="25sp"
+        android:layout_alignBottom="@+id/backgroud_image"
+        android:layout_alignRight="@+id/backgroud_image"
+        android:layout_marginRight="50dp"
+        android:text="@string/spin_button_label"
+        android:textSize="5sp" />
+    
 </RelativeLayout>

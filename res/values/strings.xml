@@ -16,5 +16,6 @@
 \n  This is a playing for fun slot machine game (no gambling). It has five reels, three rows and set of betting lines. 
 \n  Newer versions can be checked at: 
 \n  http://github.com/TodorBalabanov/tuty-fruty-slot-for-android"</string>
+    <string name="spin_button_label">SPIN</string>
 
 </resources>
