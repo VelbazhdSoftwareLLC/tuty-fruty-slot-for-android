@@ -192,8 +192,58 @@
         android:layout_height="25sp"
         android:layout_alignBottom="@+id/backgroud_image"
         android:layout_alignRight="@+id/backgroud_image"
-        android:layout_marginRight="50dp"
+        android:layout_marginRight="30dp"
         android:text="@string/spin_button_label"
+        android:textSize="5sp" />
+
+    <Button
+        android:id="@+id/payout_button"
+        android:layout_width="45sp"
+        android:layout_height="25sp"
+        android:layout_alignBottom="@+id/backgroud_image"
+        android:layout_alignLeft="@+id/backgroud_image"
+        android:layout_marginLeft="30dp"
+        android:text="@string/payout_button_label"
+        android:textSize="5sp" />
+
+    <Button
+        android:id="@+id/lines_button"
+        android:layout_width="45sp"
+        android:layout_height="25sp"
+        android:layout_alignBottom="@+id/backgroud_image"
+        android:layout_alignLeft="@+id/backgroud_image"
+        android:layout_marginLeft="70dp"
+        android:text="@string/lines_button_label"
+        android:textSize="5sp" />
+
+    <Button
+        android:id="@+id/bet_button"
+        android:layout_width="45sp"
+        android:layout_height="25sp"
+        android:layout_alignBottom="@+id/backgroud_image"
+        android:layout_alignLeft="@+id/backgroud_image"
+        android:layout_marginLeft="110dp"
+        android:text="@string/bet_button_label"
+        android:textSize="5sp" />
+
+    <Button
+        android:id="@+id/max_bet_button"
+        android:layout_width="45sp"
+        android:layout_height="25sp"
+        android:layout_alignBottom="@+id/backgroud_image"
+        android:layout_alignLeft="@+id/backgroud_image"
+        android:layout_marginLeft="150dp"
+        android:text="@string/max_bet_button_label"
+        android:textSize="5sp" />
+
+    <Button
+        android:id="@+id/autoplay_button"
+        android:layout_width="45sp"
+        android:layout_height="25sp"
+        android:layout_alignBottom="@+id/backgroud_image"
+        android:layout_alignLeft="@+id/backgroud_image"
+        android:layout_marginLeft="190dp"
+        android:text="@string/autoplay_button_label"
         android:textSize="5sp" />
     
 </RelativeLayout>
