@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
+
+    <item
+        android:id="@+id/credit1000"
+        android:title="@string/load_1000_credit_option"/>
     <item
         android:id="@+id/help"
         android:title="@string/help_option"/>

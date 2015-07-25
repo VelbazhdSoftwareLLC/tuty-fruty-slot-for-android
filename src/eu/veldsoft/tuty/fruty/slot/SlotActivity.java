@@ -11,10 +11,17 @@ import android.widget.TextView;
 
 public class SlotActivity extends Activity {
 
+	/**
+	 * Internal game model instance.
+	 */
+	private SlotGame game = new SlotGame();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_slot);
+		
+		game.initialize();
 
 		Typeface typeface = Typeface.createFromAsset(getAssets(),
 				getResources().getString(R.string.digits_font_path));
@@ -28,6 +35,13 @@ public class SlotActivity extends Activity {
 	}
 
 	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		
+		game.finalize();
+	}
+	
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_slot, menu);
@@ -37,6 +51,8 @@ public class SlotActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+		case R.id.credit1000:
+			break;
 		case R.id.help:
 			startActivity(new Intent(this, HelpActivity.class));
 			break;

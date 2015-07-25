@@ -100,6 +100,12 @@ class SlotGame {
 	 * @date 08 Oct 2008
 	 */
 	public SlotGame() {
+		canvas = new GraphicCanvas();
+		gameScreen = new GraphicGameScreen(canvas);
+		payTableScreen = new PayTableScreen(canvas, gameScreen);
+
+		// TODO Start with splash screen.
+		activeScreen = GAME_SCREEN;
 	}
 
 	/**
@@ -137,5 +143,8 @@ class SlotGame {
 	 */
 	@Override
 	protected void finalize() {
+		canvas = null;
+		gameScreen = null;
+		payTableScreen = null;
 	}
 }
