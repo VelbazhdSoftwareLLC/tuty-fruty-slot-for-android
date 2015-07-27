@@ -53,6 +53,10 @@ class Bet extends VisualComponent {
 	 */
 	public static final long BET_STEP = 1;
 
+	public Bet() {
+		value = MIN_BET;
+	}
+
 	/**
 	 * Value getter.
 	 *
@@ -65,7 +69,7 @@ class Bet extends VisualComponent {
 	 * @date 10 Sep 2008
 	 */
 	public long getValue() {
-		return 0;
+		return value;
 	}
 
 	/**
@@ -81,6 +85,7 @@ class Bet extends VisualComponent {
 	 * @date 10 Sep 2008
 	 */
 	public void setValue(final long value) {
+		this.value = value;
 	}
 
 	/**
@@ -96,21 +101,10 @@ class Bet extends VisualComponent {
 	 * @date 10 Sep 2008
 	 */
 	public void cycleIncrement() {
-	}
+		value += BET_STEP;
 
-	/**
-	 * Draw bet value. If bet value is changed it draws the updated bet value.
-	 * If bet value has not been changed it draws the unchanged bet value.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Darina Evtimova
-	 *
-	 * @email aleks_f@abv.bg
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(Canvas canvas) {
+		if (value > MAX_BET) {
+			value = MIN_BET;
+		}
 	}
 }

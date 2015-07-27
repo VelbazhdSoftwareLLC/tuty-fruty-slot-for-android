@@ -36,52 +36,53 @@ class Reels extends VisualComponent implements ReelsBase {
 	/**
 	 * Symbol 1 constant.
 	 */
-	public static final ReelSymbol SYMBOL_01 = null;
+	public static final ReelSymbol SYMBOL_01 = new ReelSymbol("Symbol 01");
 
 	/**
 	 * Symbol 2 constant.
 	 */
-	public static final ReelSymbol SYMBOL_02 = null;
+	public static final ReelSymbol SYMBOL_02 = new ReelSymbol("Symbol 02");
 
 	/**
 	 * Symbol 3 constant.
 	 */
-	public static final ReelSymbol SYMBOL_03 = null;
+	public static final ReelSymbol SYMBOL_03 = new ReelSymbol("Symbol 03");
 
 	/**
 	 * Symbol 4 constant.
 	 */
-	public static final ReelSymbol SYMBOL_04 = null;
+	public static final ReelSymbol SYMBOL_04 = new ReelSymbol("Symbol 04");
 
 	/**
 	 * Symbol 5 constant.
 	 */
-	public static final ReelSymbol SYMBOL_05 = null;
+	public static final ReelSymbol SYMBOL_05 = new ReelSymbol("Symbol 05");
 
 	/**
 	 * Symbol 6 constant.
 	 */
-	public static final ReelSymbol SYMBOL_06 = null;
+	public static final ReelSymbol SYMBOL_06 = new ReelSymbol("Symbol 06");
 
 	/**
 	 * Symbol 7 constant.
 	 */
-	public static final ReelSymbol SYMBOL_07 = null;
+	public static final ReelSymbol SYMBOL_07 = new ReelSymbol("Symbol 07");
 
 	/**
 	 * Symbol 8 constant.
 	 */
-	public static final ReelSymbol SYMBOL_08 = null;
+	public static final ReelSymbol SYMBOL_08 = new ReelSymbol("Symbol 08");
 
 	/**
 	 * Symbol 9 constant.
 	 */
-	public static final ReelSymbol SYMBOL_09 = null;
+	public static final ReelSymbol SYMBOL_09 = new ReelSymbol("Symbol 09");
 
 	/**
 	 * Special symbol 1 constant.
 	 */
-	public static final ReelSymbol SPECIAL_SYMBOL_01 = null;
+	public static final ReelSymbol SPECIAL_SYMBOL_01 = new ReelSymbol(
+			"Special Symbol 01");
 
 	/**
 	 * Number of regular symbols constant.
@@ -91,7 +92,9 @@ class Reels extends VisualComponent implements ReelsBase {
 	/**
 	 * Indexes of regular symbol constants.
 	 */
-	public static final ReelSymbol REGULAR_SYMBOLS[] = new ReelSymbol[REGULAR_NUMBER_OF_SYMBOLS];
+	public static final ReelSymbol REGULAR_SYMBOLS[] = { SYMBOL_01, SYMBOL_02,
+			SYMBOL_03, SYMBOL_04, SYMBOL_05, SYMBOL_06, SYMBOL_07, SYMBOL_08,
+			SYMBOL_09 };
 
 	/**
 	 * Number of special symbols constant.
@@ -101,7 +104,7 @@ class Reels extends VisualComponent implements ReelsBase {
 	/**
 	 * Indexes of special symbol constants.
 	 */
-	public static final ReelSymbol SPECIAL_SYMBOLS[] = new ReelSymbol[SPECIAL_NUMBER_OF_SYMBOLS];
+	public static final ReelSymbol SPECIAL_SYMBOLS[] = { SPECIAL_SYMBOL_01 };
 
 	/**
 	 * Number of total symbols constant.
@@ -111,27 +114,9 @@ class Reels extends VisualComponent implements ReelsBase {
 	/**
 	 * Indexes of total symbol constants.
 	 */
-	public static final ReelSymbol TOTAL_SYMBOLS[] = new ReelSymbol[TOTAL_NUMBER_OF_SYMBOLS];
-
-	/**
-	 * Reel symbol width.
-	 */
-	private int symbolWidth;
-
-	/**
-	 * Reel symbol height.
-	 */
-	private int symbolHeight;
-
-	/**
-	 * Reels vertical splitter width.
-	 */
-	private int verticalSplitterWidth;
-
-	/**
-	 * Reels horizontal splitter height.
-	 */
-	private int horizontalSplitterHeight;
+	public static final ReelSymbol TOTAL_SYMBOLS[] = { SYMBOL_01, SYMBOL_02,
+			SYMBOL_03, SYMBOL_04, SYMBOL_05, SYMBOL_06, SYMBOL_07, SYMBOL_08,
+			SYMBOL_09, SPECIAL_SYMBOL_01 };
 
 	/**
 	 * Visible part of the reels.
@@ -141,7 +126,7 @@ class Reels extends VisualComponent implements ReelsBase {
 	/**
 	 * Source of discrette probability distribution.
 	 */
-	private ReelsDistribution distribution;
+	private ReelsDistribution distribution = new ReelsDistribution();
 
 	/**
 	 * Constructor.
@@ -153,126 +138,7 @@ class Reels extends VisualComponent implements ReelsBase {
 	 * @date 05 Sep 2008
 	 */
 	public Reels() {
-	}
-
-	/**
-	 * Reel symbol width getter.
-	 *
-	 * @return Reel symbol width.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public int getSymbolWidth() {
-		return 0;
-	}
-
-	/**
-	 * Reel symbol width setter.
-	 *
-	 * @param symbolWidth
-	 *            Reel symbol width.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public void setSymbolWidth(int symbolWidth) {
-	}
-
-	/**
-	 * Reel symbol height getter.
-	 *
-	 * @return Reel symbol height.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public int getSymbolHeight() {
-		return 0;
-	}
-
-	/**
-	 * Reel symbol height setter.
-	 *
-	 * @param symbolHeight
-	 *            Reel symbol height.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public void setSymbolHeight(int symbolHeight) {
-	}
-
-	/**
-	 * Vertical splitter width getter.
-	 *
-	 * @return Vertical splitter width.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public int getVerticalSplitterWidth() {
-		return 0;
-	}
-
-	/**
-	 * Vertical splitter width setter.
-	 *
-	 * @param verticalSplitterWidth
-	 *            Vertical splitter width.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public void setVerticalSplitterWidth(int verticalSplitterWidth) {
-	}
-
-	/**
-	 * Horizontal splitter height getter.
-	 *
-	 * @return Horizontal splitter height.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public int getHorizontalSplitterHeight() {
-		return 0;
-	}
-
-	/**
-	 * Horizontal splitter height setter.
-	 *
-	 * @param horizontalSplitterHeight
-	 *            Horizontal splitter height.
-	 *
-	 * @author Todor Balabanov
-	 *
-	 * @email tdb@tbsoft-bg.com
-	 *
-	 * @date 21 Jun 2009
-	 */
-	public void setHorizontalSplitterHeight(int horizontalSplitterHeight) {
+		distribution.selectRandomSymbols(visibleCombination);
 	}
 
 	/**
@@ -290,6 +156,11 @@ class Reels extends VisualComponent implements ReelsBase {
 	 * @date 05 Sep 2008
 	 */
 	public void getVisibleCombination(ReelSymbol combination[][]) {
+		for (int j = 0; j < ROWS; j++) {
+			for (int i = 0; i < COLS; i++) {
+				combination[i][j] = visibleCombination[i][j];
+			}
+		}
 	}
 
 	/**
@@ -305,6 +176,11 @@ class Reels extends VisualComponent implements ReelsBase {
 	 * @date 05 Sep 2008
 	 */
 	public void setVisibleCombination(ReelSymbol combination[][]) {
+		for (int j = 0; j < ROWS; j++) {
+			for (int i = 0; i < COLS; i++) {
+				visibleCombination[i][j] = combination[i][j];
+			}
+		}
 	}
 
 	/**
@@ -317,6 +193,7 @@ class Reels extends VisualComponent implements ReelsBase {
 	 * @date 09 Oct 2008
 	 */
 	public void spin() {
+		distribution.selectRandomSymbols(visibleCombination);
 	}
 
 	/**
@@ -334,22 +211,33 @@ class Reels extends VisualComponent implements ReelsBase {
 	 * @date 09 Oct 2008
 	 */
 	public boolean hasPrize(final PrizeCombination combination) {
-		return false;
-	}
+		char mask[][] = new char[ReelsBase.COLS][ReelsBase.ROWS];
+		combination.getCombination().getMask(mask);
 
-	/**
-	 * Draw reels with their symbols. Draws visible part of the reels. When
-	 * player spins the reels, visible part of reels is repainting.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Stanislav Petrov
-	 *
-	 * @email devilfighter1806@gmail.com
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(Canvas canvas) {
+		for (int j = 0; j < ROWS; j++) {
+			for (int i = 0; i < COLS; i++) {
+				/*
+				 * Each special symbol can be used for substitution.
+				 */
+				boolean specialSymbol = false;
+				for (int k = 0; k < SPECIAL_NUMBER_OF_SYMBOLS; k++) {
+					if (visibleCombination[i][j] == SPECIAL_SYMBOLS[k]) {
+						specialSymbol = true;
+					}
+				}
+
+				/*
+				 * If element of the mask is 1 then check for symbol
+				 * equivalence.
+				 */
+				if (mask[i][j] == 1
+						&& visibleCombination[i][j] != combination.getSymbol()
+						&& specialSymbol == false) {
+					return false;
+				}
+			}
+		}
+
+		return true;
 	}
 }

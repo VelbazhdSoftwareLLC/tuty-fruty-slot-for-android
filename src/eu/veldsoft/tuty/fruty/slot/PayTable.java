@@ -106,22 +106,4 @@ class PayTable extends VisualComponent {
 	 */
 	public void setEntry(PayTableEntry entry, int index) {
 	}
-
-	/**
-	 * Draw pay table. During the game draws the pay table entries which is
-	 * placed in the pay table. Pay table entries present picture of every
-	 * symbol, symbol's meeting on the line and calculated pay out values for
-	 * every symbol. Draws different pay table on every new game.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Darina Evtimova
-	 *
-	 * @email aleks_f@abv.bg
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(TextCanvas canvas) {
-	}
 }

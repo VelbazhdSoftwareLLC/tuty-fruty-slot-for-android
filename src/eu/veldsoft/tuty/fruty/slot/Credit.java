@@ -51,7 +51,7 @@ class Credit extends VisualComponent {
 	 * @date 11 Sep 2008
 	 */
 	public long getValue() {
-		return 0;
+		return value;
 	}
 
 	/**
@@ -67,6 +67,7 @@ class Credit extends VisualComponent {
 	 * @date 11 Sep 2008
 	 */
 	public void setValue(final long value) {
+		this.value = value;
 	}
 
 	/**
@@ -83,6 +84,7 @@ class Credit extends VisualComponent {
 	 * @date 11 Sep 2008
 	 */
 	public void increment(final long amount) {
+		value += amount;
 	}
 
 	/**
@@ -99,22 +101,6 @@ class Credit extends VisualComponent {
 	 * @date 11 Sep 2008
 	 */
 	public void decrement(final long amount) {
-	}
-
-	/**
-	 * Draw credit value. If credit value is changed it draws the updated credit
-	 * value. If credit value has not been changed it draws the unchanged credit
-	 * value.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Stanislav Petrov
-	 *
-	 * @email devilfighter1806@gmail.com
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(Canvas canvas) {
+		value -= amount;
 	}
 }

@@ -207,7 +207,7 @@ class GraphicGameScreen extends GameScreen {
 	 *
 	 * @date
 	 */
-	public GraphicGameScreen(Canvas canvas) {
-		super(canvas);
+	public GraphicGameScreen() {
+		super();
 	}
 }

@@ -1,5 +1,7 @@
 package eu.veldsoft.tuty.fruty.slot;
 
+import java.util.Random;
+
 class Util {
 
 	class SDLSprite {
@@ -32,4 +34,6 @@ class Util {
 	static void SDL_SetAlpha(SDL_Surface m_Surface, String sdlSrcalpha,
 			Uint32 shade) {
 	}
+	
+	static Random PRNG = new Random();
 }

@@ -36,44 +36,87 @@ package eu.veldsoft.tuty.fruty.slot;
 class GameScreen extends Screen {
 
 	/**
-	 * Game Screen visualization.
-	 */
-	private Canvas canvas;
-
-	/**
 	 * Visual reels component.
 	 */
-	protected Reels reels;
+	protected Reels reels = new Reels();
 
 	/**
 	 * Visual lines selector component.
 	 */
-	protected LinesSelector selector;
+	protected LinesSelector selector = new LinesSelector();
 
 	/**
 	 * Visual component which shows bet value.
 	 */
-	protected Bet bet;
+	protected Bet bet = new Bet();
 
 	/**
 	 * Visual component which shows how many lines are selected.
 	 */
-	protected LinesSelected lines;
+	protected LinesSelected lines = new LinesSelected(selector);
 
 	/**
 	 * Visual component which shows total bet value.
 	 */
-	protected TotalBet total;
+	protected TotalBet total = new TotalBet(bet, lines);
 
 	/**
 	 * Visual component which shows how many credits are won.
 	 */
-	protected WinnerPaid paid;
+	protected WinnerPaid paid = new WinnerPaid(bet, selector, reels);
 
 	/**
 	 * Visual components which shows credit.
 	 */
-	protected Credit credit;
+	protected Credit credit = new Credit();
+
+	public Reels getReels() {
+		return reels;
+	}
+
+	public void setReels(Reels reels) {
+		this.reels = reels;
+	}
+
+	public LinesSelected getLines() {
+		return lines;
+	}
+
+	public void setLines(LinesSelected lines) {
+		this.lines = lines;
+	}
+
+	public TotalBet getTotal() {
+		return total;
+	}
+
+	public void setTotal(TotalBet total) {
+		this.total = total;
+	}
+
+	public WinnerPaid getPaid() {
+		return paid;
+	}
+
+	public void setPaid(WinnerPaid paid) {
+		this.paid = paid;
+	}
+
+	public Credit getCredit() {
+		return credit;
+	}
+
+	public void setCredit(Credit credit) {
+		this.credit = credit;
+	}
+
+	public void setSelector(LinesSelector selector) {
+		this.selector = selector;
+	}
+
+	public void setBet(Bet bet) {
+		this.bet = bet;
+	}
 
 	/**
 	 * Constructor.
@@ -87,7 +130,7 @@ class GameScreen extends Screen {
 	 *
 	 * @date 06 Oct 2008
 	 */
-	public GameScreen(Canvas canvas) {
+	public GameScreen() {
 	}
 
 	/**
@@ -102,7 +145,7 @@ class GameScreen extends Screen {
 	 * @date 26 Oct 2008
 	 */
 	public Bet getBet() {
-		return null;
+		return bet;
 	}
 
 	/**
@@ -117,7 +160,7 @@ class GameScreen extends Screen {
 	 * @date 26 Oct 2008
 	 */
 	public LinesSelector getSelector() {
-		return null;
+		return selector;
 	}
 
 	/**
@@ -130,6 +173,8 @@ class GameScreen extends Screen {
 	 * @date 08 Oct 2008
 	 */
 	public void numberOfLinesChange() {
+		selector.linesUp();
+		total.update();
 	}
 
 	/**
@@ -142,6 +187,8 @@ class GameScreen extends Screen {
 	 * @date 08 Oct 2008
 	 */
 	public void betChange() {
+		bet.cycleIncrement();
+		total.update();
 	}
 
 	/**
@@ -157,6 +204,7 @@ class GameScreen extends Screen {
 	 * @date 08 Oct 2008
 	 */
 	public void addCredit(final long amount) {
+		credit.increment(amount);
 	}
 
 	/**
@@ -169,29 +217,26 @@ class GameScreen extends Screen {
 	 * @date 09 Oct 2008
 	 */
 	public void spinReels() {
-	}
+		/*
+		 * User is able to spin only with enough credit.
+		 */
+		if (credit.getValue() >= total.getValue()) {
+			/*
+			 * Take bet from the credit before to spin the reels.
+			 */
+			credit.decrement(total.getValue());
 
-	/**
-	 * Update all components on the game screen.
-	 *
-	 * @author Anton Dimitrov
-	 *
-	 * @email anton.naskov@gmail.com
-	 *
-	 * @date 06 Oct 2008
-	 */
-	public void update() {
-	}
+			reels.spin();
 
-	/**
-	 * Draw all components on the game screen.
-	 *
-	 * @author Anton Dimitrov
-	 *
-	 * @email anton.naskov@gmail.com
-	 *
-	 * @date 06 Oct 2008
-	 */
-	public void draw() {
+			/*
+			 * Winner paid can be changed faster and because of this win should be
+			 * written in temporary variable.
+			 */
+			long money = paid.calculateWin();
+			paid.setValue(money);
+			addCredit(money);
+		} else {
+			//TODO Write not enough credit message.
+		}
 	}
 }

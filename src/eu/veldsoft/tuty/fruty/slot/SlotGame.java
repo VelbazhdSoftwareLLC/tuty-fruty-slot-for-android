@@ -101,7 +101,7 @@ class SlotGame {
 	 */
 	public SlotGame() {
 		canvas = new GraphicCanvas();
-		gameScreen = new GraphicGameScreen(canvas);
+		gameScreen = new GraphicGameScreen();
 		payTableScreen = new PayTableScreen(canvas, gameScreen);
 
 		// TODO Start with splash screen.

@@ -61,5 +61,20 @@ class ReelsDistribution implements ReelsBase {
 	 * @date 09 Sep 2008
 	 */
 	public void selectRandomSymbols(ReelSymbol symbols[][]) {
+		for (int i = 0; i < ReelsBase.COLS; i++) {
+			int r = Util.PRNG.nextInt(DISTRIBUTION_SIZE);
+
+			for (int j = 0; j < ReelsBase.ROWS; j++) {
+				int n = r - (ReelsBase.ROWS / 2) + j;
+
+				if (n < 0) {
+					symbols[i][j] = DISTRIBUTION[i][DISTRIBUTION_SIZE + n];
+				} else if (n >= DISTRIBUTION_SIZE) {
+					symbols[i][j] = DISTRIBUTION[i][n - DISTRIBUTION_SIZE];
+				} else {
+					symbols[i][j] = DISTRIBUTION[i][n];
+				}
+			}
+		}
 	}
 }

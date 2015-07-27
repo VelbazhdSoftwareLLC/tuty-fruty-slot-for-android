@@ -116,8 +116,14 @@ class LinesSelector extends VisualComponent {
 	 *
 	 * @date 05 Sep 2008
 	 */
-	public char[] getSelected(char flags[]) {
-		return null;
+	public char[] getSelected() {
+		char flags[] = new char[selected.length];
+
+		for (int i = 0; i < selected.length; i++) {
+			flags[i] = selected[i];
+		}
+
+		return flags;
 	}
 
 	/**
@@ -133,6 +139,9 @@ class LinesSelector extends VisualComponent {
 	 * @date 05 Sep 2008
 	 */
 	public void setSelected(final char flags[]) {
+		for (int i = 0; i < flags.length && i < selected.length; i++) {
+			selected[i] = flags[i];
+		}
 	}
 
 	/**
@@ -145,6 +154,51 @@ class LinesSelector extends VisualComponent {
 	 * @date 08 Oct 2008
 	 */
 	public void linesUp() {
+		int nextSelectionIndex = LINES_AVAILABLE - 1;
+
+		/*
+		 * Searching for the next line to be selected.
+		 */
+		for (nextSelectionIndex = LINES_AVAILABLE - 1; nextSelectionIndex >= 0; nextSelectionIndex--) {
+			if (selected[nextSelectionIndex] == SELECTED) {
+				break;
+			}
+		}
+
+		/*
+		 * There are not negative indexes.
+		 */
+		if (nextSelectionIndex < 0) {
+			nextSelectionIndex = 0;
+		}
+
+		/*
+		 * After previous for it is possible next selected index to be proper if
+		 * there is no selected lines at all.
+		 */
+		if (selected[nextSelectionIndex] == SELECTED) {
+			nextSelectionIndex++;
+		}
+
+		/*
+		 * If all lines are selected and still there is a need to do selection
+		 * clear all lines and start new selection. By this way loop selection
+		 * is implmented.
+		 */
+		if (nextSelectionIndex == LINES_AVAILABLE) {
+			for (int i = 0; i < LINES_AVAILABLE; i++) {
+				selected[i] = NOT_SELECTED;
+			}
+			nextSelectionIndex = 0;
+		}
+
+		/*
+		 * Select more lines.
+		 */
+		for (int i = 0; i < LINES_CHANGE_STEP
+				&& nextSelectionIndex + i < LINES_AVAILABLE; i++) {
+			selected[nextSelectionIndex + i] = SELECTED;
+		}
 	}
 
 	/**
@@ -157,6 +211,7 @@ class LinesSelector extends VisualComponent {
 	 * @date 08 Oct 2008
 	 */
 	public void linesDown() {
+		// TODO To be implemented only if it is needed.
 	}
 
 	/**
@@ -171,24 +226,15 @@ class LinesSelector extends VisualComponent {
 	 * @date 11 Sep 2008
 	 */
 	public int numberOfSelectedLines() {
-		return 0;
-	}
+		int numberLines = 0;
 
-	/**
-	 * Draw lines selector. Lines selector shows all available lines for
-	 * playing. Player select on which lines to play from the lines selector.
-	 * Indicates the selected lines.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Stanislav Petrov
-	 *
-	 * @email devilfighter1806@gmail.com
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(Canvas canvas) {
+		for (int i = 0; i < LINES_AVAILABLE; i++) {
+			if (selected[i] == SELECTED) {
+				numberLines++;
+			}
+		}
+
+		return numberLines;
 	}
 
 	/**
@@ -208,6 +254,20 @@ class LinesSelector extends VisualComponent {
 	 * @date 19 Sep 2008
 	 */
 	public boolean isActive(final PrizeCombination combination) {
+		for (int i = 0; i < LINES_AVAILABLE; i++) {
+			if (selected[i] == SELECTED) {
+				for (int j = 0; j < Reels.TOTAL_NUMBER_OF_SYMBOLS; j++) {
+					for (int k = 0; k < Prizes.NUMBER_OF_CONFIGURATIONS; k++) {
+						if (combination != null
+								&& CORRESPONDANCE[i][j][k] != null
+								&& combination.equals(CORRESPONDANCE[i][j][k])) {
+							return true;
+						}
+					}
+				}
+			}
+		}
+
 		return false;
 	}
 }

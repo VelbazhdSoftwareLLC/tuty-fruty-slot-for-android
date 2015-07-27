@@ -172,19 +172,4 @@ class VisualComponent {
 	 */
 	public void setHeight(final int height) {
 	}
-
-	/**
-	 * Draw visual compoment. Just declare that the component should be drawn.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Darina Evtimova
-	 *
-	 * @email aleks_f@abv.bg
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(TextCanvas canvas) {
-	}
 }
