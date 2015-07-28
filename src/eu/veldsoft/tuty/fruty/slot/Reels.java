@@ -144,9 +144,6 @@ class Reels implements ReelsBase {
 	/**
 	 * Visible part of the reels getter.
 	 *
-	 * @param combination
-	 *            Result return variable.
-	 *
 	 * @return Visible combination.
 	 *
 	 * @author Stanislav Petrov
@@ -155,12 +152,16 @@ class Reels implements ReelsBase {
 	 *
 	 * @date 05 Sep 2008
 	 */
-	public void getVisibleCombination(ReelSymbol combination[][]) {
+	public ReelSymbol[][] getVisibleCombination() {
+		ReelSymbol combination[][] = new ReelSymbol[COLS][ROWS];
+
 		for (int j = 0; j < ROWS; j++) {
 			for (int i = 0; i < COLS; i++) {
 				combination[i][j] = visibleCombination[i][j];
 			}
 		}
+
+		return combination;
 	}
 
 	/**

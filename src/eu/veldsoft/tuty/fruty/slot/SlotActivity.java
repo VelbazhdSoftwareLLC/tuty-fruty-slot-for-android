@@ -1,5 +1,8 @@
 package eu.veldsoft.tuty.fruty.slot;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -8,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
 
@@ -17,6 +21,10 @@ public class SlotActivity extends Activity {
 	 * Internal game model instance.
 	 */
 	private GameScreen gameScreen = new GameScreen();
+
+	private ImageView symbols[][] = new ImageView[Reels.COLS][Reels.ROWS];
+
+	private Map<ReelSymbol, Integer> mapping = new HashMap<ReelSymbol, Integer>();
 
 	private void update() {
 		((TextView) findViewById(R.id.single_bet_value)).setText(""
@@ -31,13 +39,49 @@ public class SlotActivity extends Activity {
 		((TextView) findViewById(R.id.credit_value)).setText(""
 				+ gameScreen.getCredit().getValue());
 
-		// TODO Update symbols.
+		ReelSymbol combination[][] = gameScreen.getReels()
+				.getVisibleCombination();
+		for (int i = 0; i < combination.length; i++) {
+			for (int j = 0; j < combination[i].length; j++) {
+				if (combination[i][j] == null) {
+					continue;
+				}
+				symbols[i][j].setImageResource(mapping.get(combination[i][j]));
+			}
+		}
 	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_slot);
+
+		mapping.put(Reels.SYMBOL_01, R.drawable.symbol00);
+		mapping.put(Reels.SYMBOL_02, R.drawable.symbol01);
+		mapping.put(Reels.SYMBOL_03, R.drawable.symbol02);
+		mapping.put(Reels.SYMBOL_04, R.drawable.symbol03);
+		mapping.put(Reels.SYMBOL_05, R.drawable.symbol04);
+		mapping.put(Reels.SYMBOL_06, R.drawable.symbol05);
+		mapping.put(Reels.SYMBOL_07, R.drawable.symbol06);
+		mapping.put(Reels.SYMBOL_08, R.drawable.symbol07);
+		mapping.put(Reels.SYMBOL_09, R.drawable.symbol08);
+		mapping.put(Reels.SPECIAL_SYMBOL_01, R.drawable.symbol09);
+
+		symbols[0][0] = (ImageView) findViewById(R.id.symbol00);
+		symbols[1][0] = (ImageView) findViewById(R.id.symbol10);
+		symbols[2][0] = (ImageView) findViewById(R.id.symbol20);
+		symbols[3][0] = (ImageView) findViewById(R.id.symbol30);
+		symbols[4][0] = (ImageView) findViewById(R.id.symbol40);
+		symbols[0][1] = (ImageView) findViewById(R.id.symbol01);
+		symbols[1][1] = (ImageView) findViewById(R.id.symbol11);
+		symbols[2][1] = (ImageView) findViewById(R.id.symbol21);
+		symbols[3][1] = (ImageView) findViewById(R.id.symbol31);
+		symbols[4][1] = (ImageView) findViewById(R.id.symbol41);
+		symbols[0][2] = (ImageView) findViewById(R.id.symbol02);
+		symbols[1][2] = (ImageView) findViewById(R.id.symbol12);
+		symbols[2][2] = (ImageView) findViewById(R.id.symbol22);
+		symbols[3][2] = (ImageView) findViewById(R.id.symbol32);
+		symbols[4][2] = (ImageView) findViewById(R.id.symbol42);
 
 		Typeface typeface = Typeface.createFromAsset(getAssets(),
 				getResources().getString(R.string.digits_font_path));
@@ -93,7 +137,7 @@ public class SlotActivity extends Activity {
 						update();
 					}
 				});
-		
+
 		update();
 	}
 
