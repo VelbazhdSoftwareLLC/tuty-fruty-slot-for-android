@@ -33,42 +33,64 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 06 Oct 2008
  */
-class GameScreen extends Screen {
+class GameScreen {
 
 	/**
 	 * Visual reels component.
 	 */
-	protected Reels reels = new Reels();
+	protected Reels reels = null;
 
 	/**
 	 * Visual lines selector component.
 	 */
-	protected LinesSelector selector = new LinesSelector();
+	protected LinesSelector selector = null;
 
 	/**
 	 * Visual component which shows bet value.
 	 */
-	protected Bet bet = new Bet();
+	protected Bet bet = null;
 
 	/**
 	 * Visual component which shows how many lines are selected.
 	 */
-	protected LinesSelected lines = new LinesSelected(selector);
+	protected LinesSelected lines = null;
 
 	/**
 	 * Visual component which shows total bet value.
 	 */
-	protected TotalBet total = new TotalBet(bet, lines);
+	protected TotalBet total = null;
 
 	/**
 	 * Visual component which shows how many credits are won.
 	 */
-	protected WinnerPaid paid = new WinnerPaid(bet, selector, reels);
+	protected WinnerPaid paid = null;
 
 	/**
 	 * Visual components which shows credit.
 	 */
-	protected Credit credit = new Credit();
+	protected Credit credit = null;
+
+	/**
+	 * Constructor.
+	 *
+	 * @param canvas
+	 *            Visual components in game screen will be drawn on text canvas.
+	 *
+	 * @author Anton Dimitrov
+	 *
+	 * @email anton.naskov@gmail.com
+	 *
+	 * @date 06 Oct 2008
+	 */
+	public GameScreen() {
+		reels = new Reels();
+		selector = new LinesSelector();
+		bet = new Bet();
+		lines = new LinesSelected(selector);
+		total = new TotalBet(bet, lines);
+		paid = new WinnerPaid(bet, selector, reels);
+		credit = new Credit();
+	}
 
 	public Reels getReels() {
 		return reels;
@@ -116,21 +138,6 @@ class GameScreen extends Screen {
 
 	public void setBet(Bet bet) {
 		this.bet = bet;
-	}
-
-	/**
-	 * Constructor.
-	 *
-	 * @param canvas
-	 *            Visual components in game screen will be drawn on text canvas.
-	 *
-	 * @author Anton Dimitrov
-	 *
-	 * @email anton.naskov@gmail.com
-	 *
-	 * @date 06 Oct 2008
-	 */
-	public GameScreen() {
 	}
 
 	/**
@@ -192,6 +199,15 @@ class GameScreen extends Screen {
 	}
 
 	/**
+	 * 
+	 */
+	public void maxBetChange() {
+		bet.maximum();
+		selector.maximum();
+		total.update();
+	}
+
+	/**
 	 * User added credit from the outside world.
 	 *
 	 * @param amount
@@ -229,14 +245,14 @@ class GameScreen extends Screen {
 			reels.spin();
 
 			/*
-			 * Winner paid can be changed faster and because of this win should be
-			 * written in temporary variable.
+			 * Winner paid can be changed faster and because of this win should
+			 * be written in temporary variable.
 			 */
 			long money = paid.calculateWin();
 			paid.setValue(money);
 			addCredit(money);
 		} else {
-			//TODO Write not enough credit message.
+			// TODO Write not enough credit message.
 		}
 	}
 }

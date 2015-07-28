@@ -33,7 +33,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 10 Sep 2008
  */
-class LinesSelected extends VisualComponent {
+class LinesSelected  {
 
 	/**
 	 * Lines selector pointer.
@@ -53,6 +53,7 @@ class LinesSelected extends VisualComponent {
 	 * @date 09 Oct 2008
 	 */
 	public LinesSelected(LinesSelector selector) {
+		this.selector = selector;
 	}
 
 	/**
@@ -67,22 +68,6 @@ class LinesSelected extends VisualComponent {
 	 * @date 10 Sep 2008
 	 */
 	public LinesSelector getSelector() {
-		return null;
-	}
-
-	/**
-	 * Draw the number of the selected lines. When new lines are selected, it
-	 * shows the updated number of selected lines.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Anton Dimitrov
-	 *
-	 * @email anton.naskov@gmail.com
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(Canvas canvas) {
+		return selector;
 	}
 }

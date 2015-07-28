@@ -32,11 +32,6 @@ package eu.veldsoft.tuty.fruty.slot;
 class ReelSymbol {
 
 	/**
-	 * Reel symbol name size.
-	 */
-	public static final int NAME_SIZE = 15;
-
-	/**
 	 * Name of reel symbol. Plus one for null at the end.
 	 */
 	private String name;
@@ -54,13 +49,11 @@ class ReelSymbol {
 	 * @date 27 Oct 2008
 	 */
 	public ReelSymbol(final String name) {
+		this.name = name;
 	}
 
 	/**
 	 * Reel symbol name getter.
-	 *
-	 * @param name
-	 *            Name to be set. Plus one for null at the end.
 	 *
 	 * @return Reel symbol name.
 	 *
@@ -70,7 +63,7 @@ class ReelSymbol {
 	 *
 	 * @date 27 Oct 2008
 	 */
-	public String getName(String name) {
-		return "";
+	public String getName() {
+		return name;
 	}
 }

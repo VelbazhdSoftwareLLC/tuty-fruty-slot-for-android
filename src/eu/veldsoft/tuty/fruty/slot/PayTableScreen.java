@@ -29,12 +29,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 06 Oct 2008
  */
-class PayTableScreen extends Screen {
-
-	/**
-	 * Pay table screen visualization.
-	 */
-	private Canvas canvas;
+class PayTableScreen {
 
 	/**
 	 * Takes bet value for calculating the pay table screen.
@@ -63,18 +58,6 @@ class PayTableScreen extends Screen {
 	 *
 	 * @date 26 Oct 2008
 	 */
-	public PayTableScreen(Canvas canvas, GameScreen game) {
-	}
-
-	/**
-	 * Draws pay table screen.
-	 *
-	 * @author Qna Dimova
-	 *
-	 * @email q.dimova@gmail.com
-	 *
-	 * @date 26 Oct 2008
-	 */
-	public void draw() {
+	public PayTableScreen(GameScreen game) {
 	}
 }

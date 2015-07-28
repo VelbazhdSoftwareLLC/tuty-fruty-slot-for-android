@@ -32,7 +32,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 11 Sep 2008
  */
-class TotalBet extends VisualComponent {
+class TotalBet  {
 
 	/**
 	 * Bet pointer.
@@ -65,6 +65,9 @@ class TotalBet extends VisualComponent {
 	 * @date 09 Oct 2008
 	 */
 	public TotalBet(Bet bet, LinesSelected lines) {
+		this.bet = bet;
+		this.lines = lines;
+		update();
 	}
 
 	/**
@@ -79,7 +82,7 @@ class TotalBet extends VisualComponent {
 	 * @date 11 Sep 2008
 	 */
 	public long getValue() {
-		return 0;
+		return value;
 	}
 
 	/**
@@ -93,21 +96,6 @@ class TotalBet extends VisualComponent {
 	 * @date 11 Sep 2008
 	 */
 	public void update() {
-	}
-
-	/**
-	 * Draw total bet value. For every game it draws the updated total bet
-	 * value.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Anton Dimitrov
-	 *
-	 * @email anton.naskov@gmail.com
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(Canvas canvas) {
+		value = bet.getValue() * lines.getSelector().numberOfSelectedLines();
 	}
 }

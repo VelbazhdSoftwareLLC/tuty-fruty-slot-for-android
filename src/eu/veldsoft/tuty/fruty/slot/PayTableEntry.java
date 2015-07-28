@@ -38,13 +38,13 @@ class PayTableEntry {
 	/**
 	 * Prize combination flag.
 	 */
-	private final PrizeCombination prizeCombination = null;
+	private PrizeCombination prizeCombination = null;
 
 	/**
 	 * Value, calculated from bet per line and number of lines with a special
 	 * function.
 	 */
-	private long value;
+	private long value = 0;
 
 	/**
 	 * Default constructor.
@@ -68,6 +68,8 @@ class PayTableEntry {
 	 * @date 18 Sep 2008
 	 */
 	public PayTableEntry(final PrizeCombination prizeCombination, long value) {
+		this.prizeCombination = prizeCombination;
+		this.value = value;
 	}
 
 	/**
@@ -82,7 +84,7 @@ class PayTableEntry {
 	 * @date 15 Sep 2008
 	 */
 	public final PrizeCombination getPrizeCombination() {
-		return null;
+		return prizeCombination;
 	}
 
 	/**
@@ -98,6 +100,7 @@ class PayTableEntry {
 	 * @date 15 Sep 2008
 	 */
 	public void setPrizeCombination(final PrizeCombination prizeCombination) {
+		this.prizeCombination = prizeCombination;
 	}
 
 	/**
@@ -112,7 +115,7 @@ class PayTableEntry {
 	 * @date 15 Sep 2008
 	 */
 	public long getValue() {
-		return 0;
+		return value;
 	}
 
 	/**
@@ -128,5 +131,6 @@ class PayTableEntry {
 	 * @date 15 Sep 2008
 	 */
 	public void setValue(final long value) {
+		this.value = value;
 	}
 }

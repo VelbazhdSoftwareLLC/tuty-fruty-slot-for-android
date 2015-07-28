@@ -32,7 +32,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 10 Sep 2008
  */
-class Bet extends VisualComponent {
+class Bet  {
 	/**
 	 * Bet value per line.
 	 */
@@ -106,5 +106,9 @@ class Bet extends VisualComponent {
 		if (value > MAX_BET) {
 			value = MIN_BET;
 		}
+	}
+
+	public void maximum() {
+		value = MAX_BET;
 	}
 }

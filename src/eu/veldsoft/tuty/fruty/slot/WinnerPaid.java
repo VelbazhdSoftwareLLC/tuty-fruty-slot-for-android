@@ -30,7 +30,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 12 Sep 2008
  */
-class WinnerPaid extends VisualComponent {
+class WinnerPaid {
 
 	/**
 	 * Paid value to winner.
@@ -67,6 +67,9 @@ class WinnerPaid extends VisualComponent {
 	 * @date 11 Oct 2008
 	 */
 	private void clearFound() {
+		for (int i = 0; i < LinesSelector.LINES_AVAILABLE; i++) {
+			found[i] = null;
+		}
 	}
 
 	/**
@@ -79,6 +82,13 @@ class WinnerPaid extends VisualComponent {
 	 * @date 11 Oct 2008
 	 */
 	private void addFound(final PrizeCombination prize) {
+		for (int i = 0; i < LinesSelector.LINES_AVAILABLE; i++) {
+			if (found[i] == null) {
+				found[i] = prize;
+
+				break;
+			}
+		}
 	}
 
 	/**
@@ -91,6 +101,13 @@ class WinnerPaid extends VisualComponent {
 	 * @date 11 Oct 2008
 	 */
 	private boolean isFound(final PrizeCombination prize) {
+		for (int i = 0; i < LinesSelector.LINES_AVAILABLE; i++) {
+			if (prize != null && found[i] != null
+					&& prize.equals(found[i]) == true) {
+				return true;
+			}
+		}
+
 		return false;
 	}
 
@@ -114,6 +131,9 @@ class WinnerPaid extends VisualComponent {
 	 * @date 09 Oct 2008
 	 */
 	public WinnerPaid(Bet bet, LinesSelector selector, Reels reels) {
+		this.bet = bet;
+		this.selector = selector;
+		this.reels = reels;
 	}
 
 	/**
@@ -128,7 +148,7 @@ class WinnerPaid extends VisualComponent {
 	 * @date 12 Sep 2008
 	 */
 	public long getValue() {
-		return 0;
+		return value;
 	}
 
 	/**
@@ -144,6 +164,7 @@ class WinnerPaid extends VisualComponent {
 	 * @date 12 Sep 2008
 	 */
 	public void setValue(final long value) {
+		this.value = value;
 	}
 
 	/**
@@ -158,22 +179,38 @@ class WinnerPaid extends VisualComponent {
 	 * @date 09 Oct 2008
 	 */
 	public long calculateWin() {
-		return 0;
-	}
+		long sum = 0;
 
-	/**
-	 * Draw winner paid value. When player wins, winner paid value is drawn on
-	 * the screen.
-	 *
-	 * @param canvas
-	 *            Text drawing area pointer.
-	 *
-	 * @author Anton Dimitrov
-	 *
-	 * @email anton.naskov@gmail.com
-	 *
-	 * @date 19 Sep 2008
-	 */
-	public void draw(Canvas canvas) {
+		/*
+		 * To escape double calculation of equal configurations.
+		 */
+		clearFound();
+
+		for (int i = 0; i < LinesSelector.LINES_AVAILABLE; i++) {
+			for (int j = 0; j < Reels.TOTAL_NUMBER_OF_SYMBOLS; j++) {
+				long highestCoefficient = 0;
+				for (int k = 0; k < Prizes.NUMBER_OF_CONFIGURATIONS; k++) {
+					PrizeCombination combination = LinesSelector.CORRESPONDANCE[i][j][k];
+
+					if (selector.isActive(combination) == true
+							&& reels.hasPrize(combination)
+							&& highestCoefficient <= combination
+									.getCoefficient()
+							&& isFound(combination) == false) {
+						highestCoefficient = combination.getCoefficient();
+						addFound(combination);
+					}
+				}
+
+				/*
+				 * Sum only the highest prize.
+				 */
+				sum += (long) ((double) bet.getValue()
+						* (double) highestCoefficient * LinesSelector.LINES_MULTIPLIERS[selector
+						.numberOfSelectedLines()]);
+			}
+		}
+
+		return sum;
 	}
 }

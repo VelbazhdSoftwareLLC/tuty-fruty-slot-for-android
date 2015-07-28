@@ -35,11 +35,6 @@ package eu.veldsoft.tuty.fruty.slot;
 class PrizeCombination {
 
 	/**
-	 * Size of prize combination name
-	 */
-	public static final int NAME_SIZE = 50;
-
-	/**
 	 * Combination of symbols distribution.
 	 */
 	private Combination combination;
@@ -94,6 +89,10 @@ class PrizeCombination {
 	 */
 	public PrizeCombination(Combination combination, final ReelSymbol symbol,
 			final int coefficient, final String name) {
+		this.combination = combination;
+		this.symbol = symbol;
+		this.coefficient = coefficient;
+		this.name = name;
 	}
 
 	/**
@@ -108,7 +107,7 @@ class PrizeCombination {
 	 * @date 09 Sep 2008
 	 */
 	public Combination getCombination() {
-		return null;
+		return combination;
 	}
 
 	/**
@@ -124,6 +123,7 @@ class PrizeCombination {
 	 * @date 09 Sep 2008
 	 */
 	public void setCombination(final Combination combination) {
+		this.combination = combination;
 	}
 
 	/**
@@ -138,7 +138,7 @@ class PrizeCombination {
 	 * @date 09 Sep 2008
 	 */
 	public ReelSymbol getSymbol() {
-		return null;
+		return symbol;
 	}
 
 	/**
@@ -154,6 +154,7 @@ class PrizeCombination {
 	 * @date 09 Sep 2008
 	 */
 	public void setSymbol(ReelSymbol symbol) {
+		this.symbol = symbol;
 	}
 
 	/**
@@ -168,7 +169,7 @@ class PrizeCombination {
 	 * @date 09 Sep 2008
 	 */
 	public int getCoefficient() {
-		return 0;
+		return coefficient;
 	}
 
 	/**
@@ -184,13 +185,11 @@ class PrizeCombination {
 	 * @date 09 Sep 2008
 	 */
 	public void setCoefficient(final int coefficient) {
+		this.coefficient = coefficient;
 	}
 
 	/**
 	 * Name of prize combination getter.
-	 *
-	 * @param name
-	 *            Name of prize combination.
 	 *
 	 * @return Name of prize combination pointer.
 	 *
@@ -200,8 +199,8 @@ class PrizeCombination {
 	 *
 	 * @date 02 Oct 2008
 	 */
-	public String getName(String name) {
-		return null;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -217,6 +216,7 @@ class PrizeCombination {
 	 * @date 02 Oct 2008
 	 */
 	public void setName(final String name) {
+		this.name = name;
 	}
 
 	/**
@@ -235,6 +235,22 @@ class PrizeCombination {
 	 * @date 02 Oct 2008
 	 */
 	public boolean equals(final PrizeCombination combination) {
-		return false;
+		if (this.symbol != combination.symbol) {
+			return false;
+		}
+
+		if (this.coefficient != combination.coefficient) {
+			return false;
+		}
+
+		if (this.combination.equals(combination.combination) == false) {
+			return false;
+		}
+
+		if (this.name.equals(combination.name) == false) {
+			return false;
+		}
+
+		return true;
 	}
 }

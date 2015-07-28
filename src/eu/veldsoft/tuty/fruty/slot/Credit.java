@@ -32,12 +32,12 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 11 Sep 2008
  */
-class Credit extends VisualComponent {
+class Credit  {
 
 	/**
 	 * Credit value.
 	 */
-	private long value;
+	private long value = 0;
 
 	/**
 	 * Credit value getter.

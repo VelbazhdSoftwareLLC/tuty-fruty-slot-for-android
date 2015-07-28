@@ -31,7 +31,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 05 Sep 2008
  */
-class Reels extends VisualComponent implements ReelsBase {
+class Reels implements ReelsBase {
 
 	/**
 	 * Symbol 1 constant.
@@ -211,8 +211,7 @@ class Reels extends VisualComponent implements ReelsBase {
 	 * @date 09 Oct 2008
 	 */
 	public boolean hasPrize(final PrizeCombination combination) {
-		char mask[][] = new char[ReelsBase.COLS][ReelsBase.ROWS];
-		combination.getCombination().getMask(mask);
+		char mask[][] = combination.getCombination().getMask();
 
 		for (int j = 0; j < ROWS; j++) {
 			for (int i = 0; i < COLS; i++) {

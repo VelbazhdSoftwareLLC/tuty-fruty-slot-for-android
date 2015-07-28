@@ -32,7 +32,7 @@ package eu.veldsoft.tuty.fruty.slot;
  *
  * @date 15 Sep 2008
  */
-class PayTable extends VisualComponent {
+class PayTable  {
 
 	/**
 	 * Number of entries.
@@ -69,6 +69,9 @@ class PayTable extends VisualComponent {
 	 * @date 18 Sep 2008
 	 */
 	public PayTable(PayTableEntry entries[]) {
+		for (int i = 0; i < NUMBER_OF_ENTRIES; i++) {
+			this.entries[i] = entries[i];
+		}
 	}
 
 	/**
@@ -86,7 +89,7 @@ class PayTable extends VisualComponent {
 	 * @date 15 Sep 2008
 	 */
 	public PayTableEntry getEntry(int index) {
-		return null;
+		return entries[index];
 	}
 
 	/**
@@ -105,5 +108,6 @@ class PayTable extends VisualComponent {
 	 * @date 15 Sep 2008
 	 */
 	public void setEntry(PayTableEntry entry, int index) {
+		this.entries[index] = entry;
 	}
 }

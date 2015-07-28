@@ -63,13 +63,15 @@ class Combination {
 	 * @date 15 Sep 2008
 	 */
 	public Combination(char mask[][]) {
+		for (int i = 0; i < ReelsBase.COLS; i++) {
+			for (int j = 0; j < ReelsBase.ROWS; j++) {
+				this.mask[i][j] = mask[i][j];
+			}
+		}
 	}
 
 	/**
 	 * Bit mask getter.
-	 *
-	 * @param mask
-	 *            The mask store getted value.
 	 *
 	 * @return Mask that indicates the line.
 	 *
@@ -79,8 +81,16 @@ class Combination {
 	 *
 	 * @date 08 Sep 2008
 	 */
-	public char[][] getMask(char mask[][]) {
-		return null;
+	public char[][] getMask() {
+		char mask[][] = new char[ReelsBase.COLS][ReelsBase.ROWS];
+
+		for (int i = 0; i < ReelsBase.COLS; i++) {
+			for (int j = 0; j < ReelsBase.ROWS; j++) {
+				mask[i][j] = this.mask[i][j];
+			}
+		}
+
+		return mask;
 	}
 
 	/**
@@ -96,6 +106,11 @@ class Combination {
 	 * @date 08 Sep 2008
 	 */
 	public void setMask(final char mask[][]) {
+		for (int i = 0; i < ReelsBase.COLS; i++) {
+			for (int j = 0; j < ReelsBase.ROWS; j++) {
+				this.mask[i][j] = mask[i][j];
+			}
+		}
 	}
 
 	/**
@@ -114,6 +129,14 @@ class Combination {
 	 * @date 02 Sep 2008
 	 */
 	public boolean equals(final Combination combination) {
-		return false;
+		for (int i = 0; i < ReelsBase.COLS; i++) {
+			for (int j = 0; j < ReelsBase.ROWS; j++) {
+				if (this.mask[i][j] != combination.mask[i][j]) {
+					return false;
+				}
+			}
+		}
+
+		return true;
 	}
 }
