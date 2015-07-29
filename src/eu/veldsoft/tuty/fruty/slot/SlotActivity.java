@@ -43,10 +43,23 @@ public class SlotActivity extends Activity {
 				.getVisibleCombination();
 		for (int i = 0; i < combination.length; i++) {
 			for (int j = 0; j < combination[i].length; j++) {
+				symbols[i][j].setAlpha(1.0F);
+			}
+		}
+		for (int i = 0; i < combination.length; i++) {
+			for (int j = 0; j < combination[i].length; j++) {
 				if (combination[i][j] == null) {
 					continue;
 				}
 				symbols[i][j].setImageResource(mapping.get(combination[i][j]));
+			}
+		}
+		char mask[][] = gameScreen.getPaid().getWinsMask();
+		for (int i = 0; i < combination.length; i++) {
+			for (int j = 0; j < combination[i].length; j++) {
+				if (mask[i][j] == 1) {
+					symbols[i][j].setAlpha(0.5F);
+				}
 			}
 		}
 	}

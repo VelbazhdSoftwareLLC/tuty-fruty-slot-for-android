@@ -58,6 +58,12 @@ class WinnerPaid {
 	private final PrizeCombination found[] = new PrizeCombination[LinesSelector.LINES_AVAILABLE];
 
 	/**
+	 * Symbols part of the win.
+	 */
+	private char winSymbol[][] = new char[Reels.COLS][Reels.ROWS];
+
+	
+	/**
 	 * Clear array with found pointers.
 	 *
 	 * @author Stanislav Petrov
@@ -69,6 +75,12 @@ class WinnerPaid {
 	private void clearFound() {
 		for (int i = 0; i < LinesSelector.LINES_AVAILABLE; i++) {
 			found[i] = null;
+		}
+		
+		for(int i=0; i<winSymbol.length; i++) {
+			for(int j=0; j<winSymbol[i].length; j++) {
+				winSymbol[i][j] = 0;
+			}			
 		}
 	}
 
@@ -82,6 +94,14 @@ class WinnerPaid {
 	 * @date 11 Oct 2008
 	 */
 	private void addFound(final PrizeCombination prize) {
+		char mask[][] = prize.getCombination().getMask();
+		
+		for(int i=0; i<winSymbol.length; i++) {
+			for(int j=0; j<winSymbol[i].length; j++) {
+				winSymbol[i][j] |= mask[i][j];
+			}			
+		}
+		
 		for (int i = 0; i < LinesSelector.LINES_AVAILABLE; i++) {
 			if (found[i] == null) {
 				found[i] = prize;
@@ -167,6 +187,14 @@ class WinnerPaid {
 		this.value = value;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
+	public char[][] getWinsMask() {
+		return winSymbol;
+	}
+	
 	/**
 	 * Calculate winner paid value.
 	 *
