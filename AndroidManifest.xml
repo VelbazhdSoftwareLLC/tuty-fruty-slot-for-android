@@ -44,6 +44,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".InnerBannerActivity"
+            android:label="@string/title_activity_inner_banner"
+            android:noHistory="true" >
+            <meta-data
+                android:name="timeout"
+                android:value="5000" />
+        </activity>
+        <activity
             android:name=".SlotActivity"
             android:label="@string/title_activity_slot"
             android:screenOrientation="landscape" >

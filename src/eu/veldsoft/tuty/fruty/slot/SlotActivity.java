@@ -6,6 +6,8 @@ import java.util.Map;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,6 +18,11 @@ import android.widget.TextView;
 import android.widget.Button;
 
 public class SlotActivity extends Activity {
+	private SoundPool sounds = null;
+
+	private int rollSoundId = -1;
+
+	private int winSoundId = -1;
 
 	/**
 	 * Internal game model instance.
@@ -69,6 +76,10 @@ public class SlotActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_slot);
 
+		sounds = new SoundPool(4, AudioManager.STREAM_MUSIC, 0);
+		rollSoundId = sounds.load(SlotActivity.this, R.raw.droplet, 1);
+		winSoundId = sounds.load(SlotActivity.this, R.raw.pinc, 1);
+
 		mapping.put(Reels.SYMBOL_01, R.drawable.symbol00);
 		mapping.put(Reels.SYMBOL_02, R.drawable.symbol01);
 		mapping.put(Reels.SYMBOL_03, R.drawable.symbol02);
@@ -112,6 +123,12 @@ public class SlotActivity extends Activity {
 					public void onClick(View v) {
 						gameScreen.spinReels();
 						update();
+
+						if (gameScreen.getPaid().getValue() > 0) {
+							sounds.play(winSoundId, 0.99f, 0.99f, 0, 0, 1);
+						} else {
+							sounds.play(rollSoundId, 0.99f, 0.99f, 0, 0, 1);
+						}
 					}
 				});
 
@@ -119,8 +136,9 @@ public class SlotActivity extends Activity {
 				.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View v) {
-						gameScreen.numberOfLinesChange();
-						update();
+						// TODO Implement line selection.
+						// gameScreen.numberOfLinesChange();
+						// update();
 					}
 				});
 
@@ -157,6 +175,9 @@ public class SlotActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+
+		sounds.release();
+		sounds = null;
 	}
 
 	@Override
@@ -171,8 +192,8 @@ public class SlotActivity extends Activity {
 		switch (item.getItemId()) {
 		case R.id.credit1000:
 			gameScreen.addCredit(1000);
-			// TODO Show inner banner activity.
 			update();
+			startActivity(new Intent(this, InnerBannerActivity.class));
 			break;
 		case R.id.help:
 			startActivity(new Intent(this, HelpActivity.class));

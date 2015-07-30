@@ -23,5 +23,6 @@
     <string name="max_bet_button_label">MAX BET</string>
     <string name="autoplay_button_label">AUTOPLAY</string>
     <string name="load_1000_credit_option">Load 1000 Credit</string>
+    <string name="title_activity_inner_banner">Advertisement</string>
 
 </resources>
