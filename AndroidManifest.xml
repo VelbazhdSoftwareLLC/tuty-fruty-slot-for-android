@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.veldsoft.tuty.fruty.slot"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="15" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <supports-screens
-        android:anyDensity="true"
-        android:compatibleWidthLimitDp="640"
-        android:largeScreens="true"
-        android:largestWidthLimitDp="720"
-        android:normalScreens="false"
-        android:requiresSmallestWidthDp="640"
-        android:resizeable="true"
-        android:smallScreens="false"
-        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
