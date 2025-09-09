@@ -10,8 +10,8 @@ android {
         applicationId "eu.veldsoft.tuty.fruty.slot"
         minSdk 25
         targetSdk 33
-        versionCode 3
-        versionName "1.11"
+        versionCode 4
+        versionName "1.12"
     }
 
     buildTypes {
