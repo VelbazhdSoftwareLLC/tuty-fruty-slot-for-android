@@ -1,0 +1,18 @@
+# app_identifier("[[APP_IDENTIFIER]]") # The bundle identifier of your app
+# apple_id("[[APPLE_ID]]") # Your Apple email address
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
+
+# You can define your app identifier and other configurations here
+# For Android, you typically need:
+package_name("com.velbazhdsoftware.tutyfrutyslot") # Replace with your actual package name
+
+# JSON key file for Google Play Console API access
+# json_key_file("path/to/your/service-account-key.json")
+
+# If you need to specify the keystore for signing
+# keystore_file("path/to/your/keystore.jks")
+# keystore_password("your_keystore_password")
+# key_password("your_key_password")
+# key_alias("your_key_alias")

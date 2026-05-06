@@ -4,14 +4,14 @@ plugins {
 
 android {
     namespace "eu.veldsoft.tuty.fruty.slot"
-    compileSdk 34
+    compileSdk 33
 
     defaultConfig {
         applicationId "eu.veldsoft.tuty.fruty.slot"
         minSdk 25
         targetSdk 33
-        versionCode 4
-        versionName "1.12"
+        versionCode 5
+        versionName "1.12.1"
     }
 
     buildTypes {

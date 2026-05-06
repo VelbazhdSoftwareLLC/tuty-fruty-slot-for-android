@@ -1,0 +1,1 @@
+This is a playing for fun slot machine game (no gambling). It has five reels, three rows and set of betting lines.
